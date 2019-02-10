@@ -1,0 +1,24 @@
+{
+  "middleName" : "Etienne",
+  "lastName" : "Hallows",
+  "contactDetails" : {
+    "address" : {
+      "streetAddressLineOne" : "123 fake street",
+      "streetAddressLineTwo" : "",
+      "suburb" : "",
+      "city" : "",
+      "region" : "Auckland",
+      "postCode" : "",
+      "countryCode" : ""
+    },
+    "mobileNum" : null,
+    "homeNum" : null,
+    "email" : null
+  },
+  "password" : "newPassword",
+  "modifications" : [ ],
+  "firstName" : "Timothy",
+  "userName" : 0,
+  "active" : true,
+  "version" : 2
+}

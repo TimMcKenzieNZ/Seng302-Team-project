@@ -1,0 +1,16 @@
+{
+  "firstName" : "Timothy",
+  "middleName" : "Lyle",
+  "lastName" : "Brown",
+  "contactDetails" : {
+    "address" : null,
+    "mobileNum" : null,
+    "homeNum" : null,
+    "email" : null
+  },
+  "userName" : "Narnia1",
+  "password" : "new_password",
+  "modifications" : [ ],
+  "active" : true,
+  "version" : 2
+}

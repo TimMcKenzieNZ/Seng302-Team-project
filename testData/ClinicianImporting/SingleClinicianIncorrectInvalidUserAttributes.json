@@ -1,0 +1,24 @@
+{
+  "firstName" : "utyvyiutctfjxghcvgvjhbkugcyfrciytrxi6rxyfjchjvfnbgfcjyfchfcgvhyfcbgfcvbvckjhvcjyfcgfxtuxiyfcjgcjhgciyfcj",
+  "middleName" : "Barrington",
+  "lastName" : "Strider",
+  "contactDetails" : {
+    "address" : {
+      "streetAddressLineOne" : "University of Canterbury",
+      "streetAddressLineTwo" : "145 Ilam Rd",
+      "suburb" : "Ilam",
+      "city" : "",
+      "region" : "Wellington",
+      "postCode" : "8041",
+      "countryCode" : "64"
+    },
+    "mobileNum" : "098678456456",
+    "homeNum" : "456578876789",
+    "email" : "person@person.com"
+  },
+  "userName" : 76,
+  "password" : "gkjyvjcrgszyesy56uytfjtf8yugithfutdfjtfi76fyjfhtfuydrytdjytdi6ryfcgjrctfghcdxgdxutrx",
+  "modifications" : [ ],
+  "active" : true,
+  "version" : 1
+}

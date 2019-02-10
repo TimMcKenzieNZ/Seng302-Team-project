@@ -1,0 +1,33 @@
+{
+  "middleName" : null,
+  "lastName" : "Wooster",
+  "contactDetails" : {
+    "address" : {
+      "streetAddressLineOne" : "5 Daisy Place, CHCH",
+      "streetAddressLineTwo" : "",
+      "suburbName" : "",
+      "cityName" : "",
+      "region" : "Canterbury",
+      "postCode" : "",
+      "countryCode" : ""
+    },
+    "mobileNum" : "",
+    "homeNum" : "",
+    "email" : ""
+  },
+  "password" : "WXYZ1234",
+  "creationDate" : [ 2018, 5, 24, 15, 39, 21, 271000000 ],
+  "modifications" : [ {
+    "accountModified" : "Bertram Wooster (Clinician, Staff ID: 32)",
+    "modifyingAccount" : "Default Administrator (Administrator, username: Sudo)",
+    "valChanged" : "created",
+    "originalVal" : "",
+    "changedVal" : "",
+    "changeTime" : [ 2018, 5, 24, 15, 39, 21, 271000000 ]
+  } ],
+  "givenName" : "Bertram",
+  "userName" : "32",
+  "active" : true,
+  "version": 1,
+  "updateMessage" : "waiting for new message"
+}

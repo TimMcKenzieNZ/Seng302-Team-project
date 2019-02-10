@@ -1,0 +1,13 @@
+@font-face {
+    font-family: Roboto;
+    src: url("../Roboto-Thin.ttf");
+}
+
+.root {
+    -fx-font-family: Roboto, "Cambria";
+}
+
+
+.actionButton{
+    -fx-border-color: transparent;
+}

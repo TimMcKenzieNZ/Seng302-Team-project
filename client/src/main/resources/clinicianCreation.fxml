@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="625.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="seng302.controllers.ClinicianCreationController">
+  <children>
+    <AnchorPane prefHeight="79.0" prefWidth="926.0">
+      <children>
+        <Label fx:id="createClinicianLabel" layoutX="291.0" layoutY="19.0" prefHeight="46.0" prefWidth="268.0" text="Create Clinician">
+          <font>
+            <Font name="System Bold" size="30.0" />
+          </font>
+        </Label>
+      </children>
+    </AnchorPane>
+    <AnchorPane prefHeight="522.0" prefWidth="829.0">
+      <children>
+        <Label layoutX="30.0" layoutY="48.0" text="Personal Details">
+          <font>
+            <Font name="System Bold" size="20.0" />
+          </font>
+        </Label>
+        <Label layoutX="28.0" layoutY="100.0" text="Given Name *">
+          <font>
+            <Font size="20.0" />
+          </font>
+        </Label>
+        <TextField fx:id="givenNameTextField" layoutX="168.0" layoutY="103.0" prefHeight="25.0" prefWidth="268.0" />
+        <Label layoutX="28.0" layoutY="155.0" text="Last Name *">
+          <font>
+            <Font size="20.0" />
+          </font>
+        </Label>
+        <Label layoutX="28.0" layoutY="210.0" text="Staff ID *">
+          <font>
+            <Font size="20.0" />
+          </font>
+        </Label>
+        <TextField fx:id="lastNameTextField" layoutX="168.0" layoutY="155.0" prefHeight="25.0" prefWidth="268.0" />
+        <TextField fx:id="staffIDTextField" layoutX="168.0" layoutY="210.0" prefHeight="25.0" prefWidth="268.0" />
+        <Label layoutX="30.0" layoutY="314.0" text="Work Address">
+          <font>
+            <Font name="System Bold" size="20.0" />
+          </font>
+        </Label>
+        <Label layoutX="28.0" layoutY="356.0" text="Street Address *">
+          <font>
+            <Font size="20.0" />
+          </font>
+        </Label>
+        <Label layoutX="26.0" layoutY="265.0" text="Password *">
+          <font>
+            <Font size="20.0" />
+          </font>
+        </Label>
+        <PasswordField fx:id="passwordTextField" layoutX="168.0" layoutY="265.0" prefHeight="25.0" prefWidth="268.0" />
+        <Label layoutX="28.0" layoutY="411.0" text="Region *">
+          <font>
+            <Font size="20.0" />
+          </font>
+        </Label>
+        <TextField fx:id="streetAddressTextField" layoutX="195.0" layoutY="359.0" prefHeight="25.0" prefWidth="626.0" />
+        <ComboBox fx:id="regionComboBox" layoutX="195.0" layoutY="411.0" onAction="#regionSelected" prefHeight="25.0" prefWidth="232.0" />
+        <Button fx:id="cancelButton" layoutX="672.0" layoutY="478.0" mnemonicParsing="false" onAction="#cancelButtonClicked" styleClass="redButton" text="Cancel">
+          <font>
+            <Font size="15.0" />
+          </font>
+        </Button>
+        <Button fx:id="doneButton" layoutX="764.0" layoutY="478.0" mnemonicParsing="false" onAction="#doneButtonClicked" text="Done">
+          <font>
+            <Font size="15.0" />
+          </font>
+        </Button>
+            <Label fx:id="staffIdError" layoutX="168.0" layoutY="192.0" prefHeight="17.0" prefWidth="626.0" styleClass="errorText" text="This Staff ID is already used, please choose another." textFill="#cc0a0a" />
+            <Label fx:id="lastNameError" layoutX="167.0" layoutY="138.0" prefHeight="17.0" prefWidth="626.0" styleClass="errorText" text="Label" textFill="#cc0a0a">
+               <font>
+                  <Font size="11.0" />
+               </font></Label>
+            <Label fx:id="firstNameError" layoutX="167.0" layoutY="88.0" prefHeight="17.0" prefWidth="626.0" styleClass="errorText" text="Label" textFill="#cc0a0a">
+               <font>
+                  <Font size="11.0" />
+               </font></Label>
+            <Label fx:id="passwordError" layoutX="167.0" layoutY="250.0" prefHeight="17.0" prefWidth="626.0" styleClass="errorText" text="Label" textFill="#cc0a0a" />
+            <Label fx:id="addressError" layoutX="195.0" layoutY="344.0" prefHeight="17.0" prefWidth="626.0" styleClass="errorText" text="Label" textFill="#cc0a0a" />
+            <Label fx:id="regionError" layoutX="195.0" layoutY="394.0" prefHeight="17.0" prefWidth="500.0" styleClass="errorText" text="Label" textFill="#cc0a0a" />
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>

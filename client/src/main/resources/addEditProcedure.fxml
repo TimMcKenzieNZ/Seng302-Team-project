@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<AnchorPane stylesheets="/CSS/profile.css" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.141"
+  xmlns:fx="http://javafx.com/fxml/1"
+  fx:controller="seng302.controllers.AddEditProcedureController">
+  <children>
+    <GridPane layoutX="193.0" layoutY="74.0" AnchorPane.bottomAnchor="0.0"
+      AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+      </columnConstraints>
+      <rowConstraints>
+        <RowConstraints maxHeight="194.0" minHeight="10.0" prefHeight="76.0" vgrow="SOMETIMES"/>
+        <RowConstraints maxHeight="524.0" minHeight="10.0" prefHeight="524.0" vgrow="SOMETIMES"/>
+      </rowConstraints>
+      <children>
+        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+          <children>
+            <Label layoutX="14.0" layoutY="18.0" text="Add or Edit Procedure"
+              AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="20.0">
+              <font>
+                <Font size="30.0"/>
+              </font>
+            </Label>
+          </children>
+        </AnchorPane>
+        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+          <children>
+            <GridPane prefHeight="90.0" prefWidth="391.0" AnchorPane.bottomAnchor="0.0"
+              AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="0.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="270.0" minWidth="10.0"
+                  prefWidth="84.0"/>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="628.0" minWidth="10.0"
+                  prefWidth="625.0"/>
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="114.0" minHeight="0.0" prefHeight="40.0"
+                  vgrow="SOMETIMES"/>
+                <RowConstraints maxHeight="218.0" minHeight="10.0" prefHeight="52.0"
+                  vgrow="SOMETIMES"/>
+                <RowConstraints maxHeight="254.0" minHeight="10.0" prefHeight="121.0"
+                  vgrow="SOMETIMES"/>
+                <RowConstraints maxHeight="352.0" minHeight="10.0" prefHeight="207.0"
+                  vgrow="SOMETIMES"/>
+                <RowConstraints maxHeight="222.0" minHeight="0.0" prefHeight="57.0"
+                  vgrow="SOMETIMES"/>
+              </rowConstraints>
+              <children>
+                <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                  <children>
+                    <Label layoutX="2.0" layoutY="14.0" text="Summary:"
+                      AnchorPane.topAnchor="10.0"/>
+                    <Label layoutX="2.0" layoutY="31.0" text="(max 100 characters)"
+                      AnchorPane.topAnchor="26.0">
+                      <font>
+                        <Font size="10.0"/>
+                      </font>
+                    </Label>
+                  </children>
+                </AnchorPane>
+                <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+                  <children>
+                    <TextArea fx:id="summary" prefHeight="38.0" prefWidth="414.0" wrapText="true"
+                      AnchorPane.bottomAnchor="24.0" AnchorPane.leftAnchor="0.0"
+                      AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="15.0"/>
+                  </children>
+                </AnchorPane>
+                <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
+                  <children>
+                    <Label layoutY="14.0" text="Affected Organs:"/>
+                  </children>
+                </AnchorPane>
+                <AnchorPane prefHeight="48.0" prefWidth="321.0" GridPane.columnIndex="1"
+                  GridPane.rowIndex="1">
+                  <children>
+                    <HBox prefHeight="100.0" prefWidth="200.0" spacing="30.0"
+                      AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                      AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="18.0">
+                      <children>
+                        <DatePicker fx:id="date">
+                          <HBox.margin>
+                            <Insets/>
+                          </HBox.margin>
+                        </DatePicker>
+                        <CheckBox fx:id="unknownDateCheck" mnemonicParsing="false"
+                          onAction="#unknownDateClicked" prefHeight="25.0" prefWidth="105.0"
+                          text="Unknown Date?"/>
+                      </children>
+                    </HBox>
+                  </children>
+                </AnchorPane>
+                <GridPane GridPane.columnIndex="1" GridPane.rowIndex="2">
+                  <columnConstraints>
+                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="107.0" minWidth="10.0"
+                      prefWidth="62.0"/>
+                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="177.0" minWidth="10.0"
+                      prefWidth="70.0"/>
+                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="184.0" minWidth="10.0"
+                      prefWidth="68.0"/>
+                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="177.0" minWidth="10.0"
+                      prefWidth="79.0"/>
+                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="141.0" minWidth="10.0"
+                      prefWidth="108.0"/>
+                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="140.0" minWidth="10.0"
+                      prefWidth="63.0"/>
+                  </columnConstraints>
+                  <rowConstraints>
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                  </rowConstraints>
+                  <children>
+                    <Label text="Liver"/>
+                    <Label text="Kidney" GridPane.rowIndex="1"/>
+                    <Label text="Heart" GridPane.rowIndex="2"/>
+                    <Label text="Lung" GridPane.rowIndex="3"/>
+                    <Label text="Intestines" GridPane.columnIndex="2"/>
+                    <Label text="Cornea" GridPane.columnIndex="2" GridPane.rowIndex="1"/>
+                    <Label text="Middle Ear" GridPane.columnIndex="2" GridPane.rowIndex="2"/>
+                    <Label text="Skin" GridPane.columnIndex="2" GridPane.rowIndex="3"/>
+                    <Label text="Bone" GridPane.columnIndex="4"/>
+                    <Label text="Bone Marrow" GridPane.columnIndex="4" GridPane.rowIndex="1"/>
+                    <Label text="Connective Tissue" GridPane.columnIndex="4" GridPane.rowIndex="2"/>
+                    <Label text="Pancreas" GridPane.columnIndex="4" GridPane.rowIndex="3"/>
+                    <CheckBox fx:id="liverCheck" mnemonicParsing="false" GridPane.columnIndex="1"/>
+                    <CheckBox fx:id="kidneyCheck" mnemonicParsing="false" GridPane.columnIndex="1"
+                      GridPane.rowIndex="1"/>
+                    <CheckBox fx:id="heartCheck" mnemonicParsing="false" GridPane.columnIndex="1"
+                      GridPane.rowIndex="2"/>
+                    <CheckBox fx:id="lungCheck" mnemonicParsing="false" GridPane.columnIndex="1"
+                      GridPane.rowIndex="3"/>
+                    <CheckBox fx:id="intestinesCheck" mnemonicParsing="false"
+                      GridPane.columnIndex="3"/>
+                    <CheckBox fx:id="corneaCheck" mnemonicParsing="false" GridPane.columnIndex="3"
+                      GridPane.rowIndex="1"/>
+                    <CheckBox fx:id="boneCheck" mnemonicParsing="false" GridPane.columnIndex="5"/>
+                    <CheckBox fx:id="boneMarrowCheck" mnemonicParsing="false"
+                      GridPane.columnIndex="5" GridPane.rowIndex="1"/>
+                    <CheckBox fx:id="connectiveTissueCheck" mnemonicParsing="false"
+                      GridPane.columnIndex="5" GridPane.rowIndex="2"/>
+                    <CheckBox fx:id="pancreasCheck" mnemonicParsing="false" GridPane.columnIndex="5"
+                      GridPane.rowIndex="3"/>
+                    <CheckBox fx:id="middleEarCheck" mnemonicParsing="false"
+                      GridPane.columnIndex="3" GridPane.rowIndex="2"/>
+                    <CheckBox fx:id="skinCheck" mnemonicParsing="false" GridPane.columnIndex="3"
+                      GridPane.rowIndex="3"/>
+                  </children>
+                </GridPane>
+                <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3">
+                  <children>
+                    <Label layoutY="6.0" text="Description:"/>
+                  </children>
+                </AnchorPane>
+                <AnchorPane prefHeight="162.0" prefWidth="448.0" GridPane.columnIndex="1"
+                  GridPane.rowIndex="3">
+                  <children>
+                    <TextArea fx:id="description" layoutY="14.0" prefHeight="191.0"
+                      prefWidth="598.0" wrapText="true" AnchorPane.leftAnchor="0.0"
+                      AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="10.0"/>
+                  </children>
+                </AnchorPane>
+                <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1"
+                  GridPane.rowIndex="4">
+                  <children>
+                    <HBox alignment="TOP_RIGHT" layoutX="234.0" layoutY="-22.0" prefHeight="100.0"
+                      prefWidth="200.0" spacing="20.0" AnchorPane.bottomAnchor="0.0"
+                      AnchorPane.rightAnchor="35.0" AnchorPane.topAnchor="10.0">
+                      <children>
+                        <Button fx:id="cancelButton" mnemonicParsing="false"
+                          onAction="#cancelButtonPressed" text="Cancel"/>
+                        <Button fx:id="doneButton" mnemonicParsing="false"
+                          onAction="#doneButtonPressed" text="Done"/>
+                      </children>
+                    </HBox>
+                  </children>
+                </AnchorPane>
+                <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+                  <children>
+                    <Label layoutY="39.0" text="Date of Procedure:" AnchorPane.topAnchor="20.0"/>
+                  </children>
+                </AnchorPane>
+              </children>
+            </GridPane>
+          </children>
+        </AnchorPane>
+      </children>
+    </GridPane>
+  </children>
+</AnchorPane>

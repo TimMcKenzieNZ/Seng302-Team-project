@@ -1,0 +1,17 @@
+{
+  "firstName" : "Default",
+  "middleName" : "",
+  "lastName" : "Administrator",
+  "contactDetails" : {
+    "address" : null,
+    "mobileNum" : null,
+    "homeNum" : null,
+    "email" : null
+  },
+  "userName" : "Test",
+  "password" : "password",
+  "creationDate" : [ 2018, 5, 17, 18, 12, 16, 377000000 ],
+  "modifications" : [ ],
+  "active" : true,
+  "version": 1
+}

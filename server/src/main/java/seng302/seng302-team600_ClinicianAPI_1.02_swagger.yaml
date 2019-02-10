@@ -1,0 +1,1491 @@
+openapi: 3.0.0
+# Added by API Auto Mocking Plugin
+#schemas to be finished
+# getClinician single and multiple
+servers:
+# Added by API Auto Mocking Plugin
+# Added by API Auto Mocking Plugin
+  - description: SwaggerHub API Auto Mocking
+    url: https://virtserver.swaggerhub.com/seng302-team600/ClinicianAPI/1.0.0
+  - description: Team 600 ODMS Server
+    url: api/v1
+info:
+  description: |
+    This is the api spefications for Team 600's server
+  version: "1.02"
+  title: Team 600 ODMS Server
+  contact:
+    email: s302team600@cosc.canterbury.ac.nz
+
+tags:
+  - name: donors
+    description: Operations about Donor Profiles
+  - name: clinicians
+    description: Operations about clinicians
+  - name: admins
+    description: Operations about administrators
+  - name: import
+    description: Operations about importing
+paths:
+
+  /donors:
+    get:
+      tags:
+        - donors
+      security:
+        - token: []
+      summary: Gets a selected amount of donors
+      parameters:
+        - in: query
+          name: index
+          description: Number of items to skip before returning result
+          schema:
+            type: integer
+            minimum: 0
+        - in: query
+          name: amount
+          description: Number of items to return
+          schema:
+            type: integer
+            minimum: 1
+        - in: query
+          name: q
+          description: Search string for donors or receivers
+          schema:
+            type: string
+        - in: query
+          name: status
+          description: 'Only return donors with type "any", "donor/receiver", "donor", "receiver", "neither", or any combination of above'
+          schema:
+            type: string
+        - in: query
+          name: gender
+          description: 'Only return donors with genders "any", "male", "female", "unkown", "unspecified", "other" or any combination of above'
+          schema:
+            type: string
+        - in: query
+          name: region
+          description: 'Only return donors from regions "Northland", "Auckland", "Waikato", "Bay of Plenty", "Gisborne", "Hawks Bay", "Taranaki", "Manawatu-Wanganui", "Wellington", "Tasman", "Nelson", "Marlborough", "West Coast", "Canterbury", "Otago", "Southland" or any combination of above'
+          schema:
+            type: string
+        - in: query
+          name: donations
+          description: 'Only return donors who are donating "liver", "kidneys", "pancreas", "heart", "lungs", "intestine", "corneas", "middleEars", "skin", "bone", "boneMarrow", "connectiveTissue" or any combination of above' 
+          schema:
+            type: string
+        - in: query
+          name: receiving
+          description: 'Only return donors who are receiving "liver", "kidneys", "pancreas", "heart", "lungs", "intestine", "corneas", "middleEars", "skin", "bone", "boneMarrow", "connectiveTissue" or any combination of above' 
+          schema:
+            type: string
+        - in: query
+          name: minAge
+          description: Return only the donorReceievers who are at least minAge old
+          schema:
+            type: integer
+            minimum: 0
+        - in: query
+          name: maxAge
+          description: Return only the donorReceievers who are at most maxAge old
+          schema:
+            type: integer
+            minimum: 0
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/donorGroupDetails'
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '500':
+          description: Internal server error
+      
+    post:
+      tags:
+        - donors
+      summary: Add a new donorReciever to the database
+      operationId: addDonor
+      requestBody:
+        content:
+          application/json:
+            schema:
+              required:
+                - nhi
+                - givenName
+                - lastName
+                - dateOfBirth
+                - password
+                - region
+                - creationDate
+              allOf:
+                - $ref: '#/components/schemas/nhi'
+                - $ref: '#/components/schemas/givenName'
+                - $ref: '#/components/schemas/lastName'
+                - $ref: '#/components/schemas/dateOfBirth'
+                - $ref: '#/components/schemas/password'
+                - $ref: '#/components/schemas/region'
+                - $ref: '#/components/schemas/creationDate'
+        required: true
+      responses:
+        '201':
+          description: New donor created successfully
+        '400':
+          description: Bad request
+        '500':
+          description: Internal server error
+          
+  '/donors/{nhi}':
+    get:
+      tags:
+        - donors
+      security:
+        - token: []
+      summary: Gets all data for a donor given by their nhi
+      parameters:
+      - in: path
+        name: nhi
+        description: donor nhi number
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/donorDetails'
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '404':
+          description: Not found
+        '500':
+          description: Internal server error 
+          
+    patch:
+      tags:
+        - donors
+      security:
+        - token: []
+      summary: Changes some selected information for a Donor
+      description: Only those properties included in the request body are changed.
+      parameters:
+      - in: path
+        name: nhi
+        description: donor nhi number
+        required: true
+        schema:
+          type: string
+      requestBody:
+        description: The body __must__ include the __version__ of the donor
+        content:
+          application/json:
+            schema:
+              anyOf:
+                - $ref: '#/components/schemas/givenName'
+                - $ref: '#/components/schemas/middleName'
+                - $ref: '#/components/schemas/lastName'
+        
+                - $ref: '#/components/schemas/nhi'
+                - $ref: '#/components/schemas/password'
+                - $ref: '#/components/schemas/creationDate'
+                - $ref: '#/components/schemas/active'
+              
+                - $ref: '#/components/schemas/currentMedications'
+                - $ref: '#/components/schemas/previousMedications'
+                - $ref: '#/components/schemas/medicationLogs'
+                - $ref: '#/components/schemas/preferredName'
+                - $ref: '#/components/schemas/title'
+                - $ref: '#/components/schemas/dateOfBirth'
+                - $ref: '#/components/schemas/gender'
+                - $ref: '#/components/schemas/birthGender'
+                - $ref: '#/components/schemas/livedInUKFlag'
+                - $ref: '#/components/schemas/receiver'
+                - type: object
+                  properties:
+                    masterIllnessList:
+                      type: object
+                      description: Donors current and historic illnesses
+                      $ref: '#/components/schemas/masterIllnessList'
+                    requiredOrgans:  
+                      type: object
+                      description: Donors organs to donate
+                      $ref: '#/components/schemas/requiredOrgans'
+                    donatedOrgans:  
+                      type: object
+                      description: Donors organs to receive
+                      $ref: '#/components/schemas/requiredOrgans'
+                    medicalProcedures:  
+                      type: object
+                      description: Donors medical procedure information
+                      $ref: '#/components/schemas/medicalProcedures'
+                    contactDetails:  
+                      type: object
+                      description: Donors contact information
+                      $ref: '#/components/schemas/contactDetails'
+                    emergencyContactDetails:  
+                      type: object
+                      description: Donors emergency contact information
+                      $ref: '#/components/schemas/emergencyContactDetails'
+                    modifications:  
+                      type: object
+                      description: Donors history of modifciations
+                      $ref: '#/components/schemas/modifications'
+                    userAttributeCollection:  
+                      type: object
+                      description: Donors personal attributes
+                      $ref: '#/components/schemas/userAttributeCollection'
+                    deathObject:  
+                      type: object
+                      description: Donors time and place of death
+                      $ref: '#/components/schemas/deathObject'
+
+        required: true
+      responses:
+        '201':
+          description: OK
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '404':
+          description: Not found
+        '409':
+          description: Already Edited
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/donorDetails'
+        '500':
+          description: Internal server error
+          
+    delete:
+      tags:
+        - donors
+      security:
+        - token: []
+      summary: Deletes the donor given by the nhi number
+      parameters:
+      - in: path
+        name: nhi
+        description: donor nhi number
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: OK
+        '401':
+          description: Unauthorized
+        '404':
+          description: Not found
+        '500':
+          description: Internal server error
+          
+          
+    
+  /donors/login:
+    post:
+      tags:
+        - donors
+      summary: log in donor with nhi number, password, and region       
+      description: All fields are required
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DonorlogInResponse'
+        '400':  
+          description: Invalid nhi, password, and region supplied
+
+  /donors/logout:
+    post:
+      tags:
+        - donors
+      summary: Logs out donor session given by the session token in header
+      security:
+        - User: []
+      responses:
+        '200':
+          description: OK
+        '401':
+          description: Unauthorized
+           
+           
+  
+  # Clinicians
+  
+  /clinicians:
+    get:
+      tags:
+        - clinicians
+      summary: Get details of multiple clinicians
+      security:
+         - token: []
+      parameters:
+        - in: query
+          name: id
+          description: Clinicians with ids matching the search
+          required: false
+          schema:
+            $ref: '#/components/schemas/search'
+            
+        - in: query
+          name: name
+          description: Clinicins with names matching the search
+          required: false
+          schema:
+            $ref: '#/components/schemas/searchName'
+        
+        - in: query
+          name: index
+          description: Start index of the clinician
+          required: false
+          schema:
+            $ref: '#/components/schemas/index'
+            
+        - in: query
+          name: offset
+          description: Offset of the index
+          required: false
+          schema:
+            $ref: '#/components/schemas/offset'
+            
+        - in: query
+          name: amount
+          description: Number of Clinicians to be returned
+          required: false
+          schema:
+            $ref: '#/components/schemas/amount'
+       
+        
+          
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/gettableClinician'
+        '401':
+          description: Unauthorized
+        '500':
+          description: Internal Server Error
+      
+    post:
+      tags: 
+        - clinicians
+      summary: Add a new clinician
+      security:
+         - token: []
+      operationId: addClinician
+      responses:
+        '201':
+          description: Created Clinician
+        '401':
+          description: Unauthorized
+        '500':
+          description: Internal Server Error
+          
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/postableClinician'
+        
+  /clinicians/{staffId}:
+    get:
+      tags:
+        - clinicians
+      summary: Get information about a clinician
+      security:
+         - token: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/getClinician'
+        '401':
+          description: Unauthorized
+        '404':
+          description: Not Found
+        '500':
+          description: Internal Server Error
+      parameters:
+      - in: path
+        name: staffId
+        required: true
+        schema:
+          $ref: '#/components/schemas/staffId'
+    patch:
+      tags:
+        - clinicians
+      summary: Edit the details of a clinician
+    
+      security:
+         - token: []
+      responses:
+        '200':
+          description: OK
+        '400':
+          description: Bad Request
+        '401':
+          description: Unauthorized
+        '404':
+          description: Not Found
+        '409':
+          description: Already Edited
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/getClinician'
+        '500':
+          description: Internal Server Error  
+      parameters:
+      - in: path
+        name: staffId
+        required: true
+        schema:
+          $ref: '#/components/schemas/staffId'
+      requestBody:
+        description: Body contains only attributes to be changed and must contain the __version__
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/patchableClinician'
+  
+    
+    delete:
+      tags:
+        - clinicians
+      summary: Delete a clinician
+      security:
+         - token: []
+      responses:
+        '200':
+          description: OK
+        '401':
+          description: Unauthorized
+        '404':
+          description: Not Found
+        '500':
+          description: Internal Server Error   
+      parameters:
+      - in: path
+        name: staffId
+        required: true
+        schema:
+          $ref: '#/components/schemas/staffId'
+          
+  /clinicians/login:
+    post:
+      tags:
+        - clinicians
+      summary: Login as a Clinician
+      responses:
+        '201':
+          description: Created
+          content:
+            applications/json:
+              schema:
+                $ref: '#/components/schemas/tokenResponse'
+              
+        '400':
+          description: Bad Request
+        '500':
+          description: Internal Server Error
+      
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/clinicianLogin'
+  
+  /clinicians/logout:
+    post:
+      tags:
+        - clinicians
+      summary: Logout as a Clinicians
+      security:
+         - token: []
+      responses:
+        '200':
+          description: OK
+        '401':
+          description: Unauthorized
+        '500':
+          description: Internal Server Error
+          
+          
+          
+  /admins:
+    get:
+      tags:
+        - admins
+      summary: Get details of multiple admins
+      security:
+         - token: []
+      parameters:
+        - in: query
+          name: name
+          description: Admins with names matching the search
+          required: false
+          schema:
+            $ref: '#/components/schemas/search'
+        
+        - in: query
+          name: username
+          description: Admins with usernames matching the search
+          required: false
+          schema:
+            $ref: '#/components/schemas/search'
+        
+        - in: query
+          name: index
+          description: Start index of the admin
+          required: false
+          schema:
+            $ref: '#/components/schemas/index'
+            
+        - in: query
+          name: offset
+          description: Offset of the index
+          required: false
+          schema:
+            $ref: '#/components/schemas/offset'
+            
+        - in: query
+          name: amount
+          description: Number of Admins to be returned
+          required: false
+          schema:
+            $ref: '#/components/schemas/amount'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/gettableAdmin'
+        '401':
+          description: Unauthorized
+        '500':
+          description: Internal Server Error
+          
+    post:
+      tags:
+        - admins
+      summary: Create an admin account
+      security:
+        - token: []
+      responses:
+        '201':
+          description: Created
+        '401':
+          description: Unauthorized
+        '500':
+          description: Internal Server Error
+          
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/postableAdmin'
+      
+          
+  /admins/{username}:
+    get:
+      tags:
+        - admins
+      summary: Get information about an admin
+      security:
+         - token: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/singleAdmin'
+        '401':
+          description: Unauthorized
+        '404':
+          description: Not Found
+        '500':
+          description: Internal Server Error
+      parameters:
+      - in: path
+        name: username
+        required: true
+        schema:
+          $ref: '#/components/schemas/username'
+          
+    patch:
+      tags:
+        - admins
+      summary: Edit the details of an Admin
+      security:
+         - token: []
+      responses:
+        '200':
+          description: OK
+        '400':
+          description: Bad Request
+        '401':
+          description: Unauthorized
+        '404':
+          description: Not Found
+        '409':
+          description: Already Edited
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/singleAdmin'
+        '500':
+          description: Internal Server Error  
+      parameters:
+      - in: path
+        name: username
+        required: true
+        schema:
+          $ref: '#/components/schemas/username'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/patchableAdmin'
+  
+  
+    delete:
+      tags:
+        - admins
+      summary: Delete an admin account
+      security:
+        - token: []
+      responses:
+        '200':
+          description: OK
+        '401':
+          description: Unauthorized
+        '404':
+          description: Not Found
+        '500':
+          description: Internal Server Error   
+      parameters:
+      - in: path
+        name: username
+        required: true
+        schema:
+          $ref: '#/components/schemas/username'
+  
+  /admins/login:
+    post:
+      tags:
+        - admins
+      summary: Login as an Admin
+      responses:
+        '201':
+          description: Created
+          content:
+            applications/json:
+              schema:
+                $ref: '#/components/schemas/tokenResponse'
+              
+        '400':
+          description: Bad Request
+        '500':
+          description: Internal Server Error
+      
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/adminLogin'
+              
+              
+  /admins/logout:
+    post:
+      tags:
+        - admins
+      summary: Logout as an Admin
+      security:
+         - token: []
+      responses:
+        '200':
+          description: OK
+        '401':
+          description: Unauthorized
+        '500':
+          description: Internal Server Error
+  
+  /import/singlejson:
+    post:
+      tags:
+        - import
+      summary: Import a JSON file
+      security:
+        - token: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/importResponse'
+        '400':
+          description: Bad Request
+        '500':
+          description: Internal Server Error
+  
+  /import/csv:
+    post:
+      tags:
+        - import
+      summary: Import a CSV file
+      security:
+        - token: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/importResponse'
+        '400':
+          description: Bad Request
+        '500':
+          description: Internal Server Error
+    
+externalDocs:
+  description: Find out more about Swagger
+  url: 'http://swagger.io'
+components:
+  schemas:
+  
+    importResponse:
+      type: object
+      properties:
+        successfulImports:
+          type: array
+          items:
+            type: object
+            properties:
+              name: 
+                type: string
+              status:
+                type: string
+              reason:
+                type: string
+        rejectedImports:
+          type: array
+          items:
+            type: object
+            properties:
+              name: 
+                type: string
+              status:
+                type: string
+              reason:
+                type: string
+  
+    password:
+      type: object
+      properties:
+        password:
+          type: string
+          format: password  
+    Donor:
+      title: donor
+      type: object
+      properties:
+        nhi:
+          type: string
+        givenName:
+          type: string
+        lastName:
+          type: string
+        dateOfBirth:
+          type: string
+        region:
+          type: string
+        creationDate:
+          type: string
+          
+          
+    modifications:
+      title: modifications
+      type: array
+      description: Array of log strings that represents the modification history of the user
+      items:
+        type: object
+        required:
+        - valChanged
+        - changeTime
+        - modfyingAccount
+        - accountModified
+        - originalVal
+        - changedVal
+        properties:
+          valChanged:
+            type: string
+          changeTime:
+            type: string
+          modfyingAccount:
+            type: string
+          accountModified:
+            type: string
+          originalVal:
+            type: string
+          changedVal:
+            type: string
+          
+          
+    contactDetails:
+      title: User Contact Details
+      type: object
+      properties:
+        mobileNumber:
+          type: string
+        homeNumber:
+          type: string
+        email:
+          type: string
+        address:
+          type: object
+          title: Address of a User
+          properties:
+            streetAddress1:
+              type: string
+            streetAddress2:
+              type: string
+            suburbname:
+              type: string
+            cityName:
+              type: string
+            region:
+              type: string
+            postCode:
+              type: string
+            countryCode:
+              type: string
+
+    emergencyContactDetails:
+      title: User Emergency Contact Details
+      type: object
+      properties:
+        mobileNumber:
+          type: string
+        homeNumber:
+          type: string
+        email:
+          type: string
+        address:
+          type: object
+          title: Address of a User
+          properties:
+            streetAddress1:
+              type: string
+            streetAddress2:
+              type: string
+            suburbname:
+              type: string
+            cityName:
+              type: string
+            region:
+              type: string
+            postCode:
+              type: string
+            countryCode:
+              type: string  
+              
+              
+    userAttributeCollection:
+      title: Donor's personal attributes
+      type: object
+      properties:
+        height:
+          type: number
+        weight:
+          type: number
+        bloodType:
+          type: string
+        bloodPressure:
+          type: string
+        smoker:
+          type: boolean
+        alcoholConsumption:
+          type: string
+        bodyMassIndexFlag:
+          type: boolean
+
+    medicalProcedures:
+      title: Donor's medical procedure information
+      type: array
+      items:
+        type: object
+        required:
+        - summary
+        - date
+        - description
+        - affectedOrgans
+        properties:
+          summary:
+            type: string
+          date:
+            type: string
+          description:
+            type: string
+          affectedOrgans:
+            type: array
+            description: Array of organs affected by the procedure
+            items:
+              type: string
+
+          
+    donorOrganInventory:
+      title: Donor's organs to donate
+      type: object
+      properties:
+        dLiver:
+          type: boolean
+        dKdneys:
+          type: boolean
+        dPancreas:
+          type: boolean
+        dHeart:
+          type: boolean
+        dLungs:
+          type: boolean
+        dIntestine:
+          type: boolean
+        dCorneas:
+          type: boolean
+        dMiddleEars:
+          type: boolean
+        dSkin:
+          type: boolean
+        bBone:
+          type: boolean
+        dBoneMarrow:
+          type: boolean
+        dConnectiveTissue:
+          type: boolean
+
+
+    requiredOrgans:
+      title: Donor's organs to receive
+      type: object
+      properties:
+        rLiver:
+          type: boolean
+        rKidneys:
+          type: boolean
+        rPancreas:
+          type: boolean
+        rHeart:
+          type: boolean
+        rLungs:
+          type: boolean
+        rIntestine:
+          type: boolean
+        rCorneas:
+          type: boolean
+        rMiddleEars:
+          type: boolean
+        rSkin:
+          type: boolean
+        rBone:
+          type: boolean
+        rBoneMarrow:
+          type: boolean
+        rConnectiveTissue:
+          type: boolean
+          
+          
+        liverStamp:
+          type: string
+        kidneysStamp:
+          type: string
+        pancreasStamp:
+          type: string
+        heartStamp:
+          type: string
+        lungsStamp:
+          type: string
+        intestineStamp:
+          type: string
+        corneasStamp:
+          type: string
+        middleEarStamp:
+          type: string
+        skinStamp:
+          type: string
+        boneStamp:
+          type: string
+        boneMarrowStamp:
+          type: string
+        connectiveTissueStamp:
+          type: string
+        
+    givenName:
+      type: object
+      properties:
+        givenName:
+          type: string
+    lastName:
+      type: object
+      properties:
+        lastName:
+          type: string
+    nhi:
+      type: object
+      properties:
+        nhi:
+          type: string
+    dateOfBirth:
+      type: object
+      properties:
+        dateOfBirth:
+          type: string
+          
+          
+          
+    deathObject:
+      type: object
+      title: The date, time, and location of a donor's death
+      properties:
+        time:
+          type: string
+        country:
+          type: string
+        region:
+          type: string
+        city:
+          type: string
+    creationDate:
+      type: object
+      properties:
+        creationDate:
+          type: string
+          
+          
+          
+    region:
+      type: object
+      properties:
+        region:
+          type: string
+    lastUpdated:
+      type: object
+      properties:
+        version:
+          type: integer
+          
+    middleName:
+      type: object
+      properties:
+        middleName:
+          type: string
+          
+    active:
+      type: object
+      properties:
+        active:
+          type: boolean
+    preferredName:
+      type: object
+      properties:
+        preferredName:
+          type: string
+          
+          
+    currentMedications:
+      type: array
+      description: Current medicaitions of a user 
+      items:
+        type: string
+    previousMedications:
+      type: array
+      description: Historic medicaitions of a user 
+      items:
+        type: string
+    medicationLogs:
+      type: array
+      description: Logs of user medications 
+      items:
+        type: string
+        
+        
+    masterIllnessList:
+      type: array
+      description: Current and historic diseases of a donor 
+      items:
+        type: object
+        required:
+        - date
+        - name
+        - cured
+        - chronic
+        properties:
+          date:
+            type: string
+          name:
+            type: string
+          cured:
+            type: boolean
+          chronic:
+            type: boolean
+            
+          
+    title:
+      type: object
+      properties:
+        title:
+          type: string
+    gender:
+      type: object
+      properties:
+        gender:
+          type: string
+    birthGender:
+      type: object
+      properties:
+        birthGender:
+          type: string
+    livedInUKFlag:
+      type: object
+      properties:
+        livedInUKFlag:
+          type: boolean
+          
+          
+    receiver:
+      type: object
+      properties:
+        receiver:
+          type: boolean
+          
+    
+    DonorlogInResponse:
+      type: object
+      properties:
+        username:
+          type: string
+          description: the user's username
+        token:
+          type: string
+          description: a token to be used for future calls
+          
+    donorGroupDetails:
+      type: array
+      description: Array of Donors
+      items:
+        type: object
+        allOf:
+          - $ref: '#/components/schemas/givenName'
+          - $ref: '#/components/schemas/middleName'
+          - $ref: '#/components/schemas/lastName'
+          - $ref: '#/components/schemas/dateOfBirth'
+          - $ref: '#/components/schemas/nhi'
+          - $ref: '#/components/schemas/region'
+          - type: object
+            properties:
+              requiredOrgans:  
+                type: object
+                description: Donors organs to donate
+                $ref: '#/components/schemas/donorOrganInventory'
+              donatedOrgans:
+                type: object
+                description: Donors organs to receive
+                $ref: '#/components/schemas/requiredOrgans'
+
+    donorDetails:
+      type: object
+      description: detailed donor object
+        
+      allOf:
+        - $ref: '#/components/schemas/givenName'
+        - $ref: '#/components/schemas/middleName'
+        - $ref: '#/components/schemas/lastName'
+
+        - $ref: '#/components/schemas/nhi'
+        - $ref: '#/components/schemas/password'
+        - $ref: '#/components/schemas/creationDate'
+        - $ref: '#/components/schemas/active'
+      
+        - $ref: '#/components/schemas/currentMedications'
+        - $ref: '#/components/schemas/previousMedications'
+        - $ref: '#/components/schemas/medicationLogs'
+        - $ref: '#/components/schemas/preferredName'
+        - $ref: '#/components/schemas/title'
+        - $ref: '#/components/schemas/dateOfBirth'
+        - $ref: '#/components/schemas/gender'
+        - $ref: '#/components/schemas/birthGender'
+        - $ref: '#/components/schemas/livedInUKFlag'
+        - $ref: '#/components/schemas/receiver'
+        - $ref: '#/components/schemas/lastUpdated'
+        - type: object
+          properties:
+            masterIllnessList:
+              type: object
+              description: Donors current and historic illnesses
+              $ref: '#/components/schemas/masterIllnessList'
+            requiredOrgans:  
+              type: object
+              description: Donors organs to donate
+              $ref: '#/components/schemas/requiredOrgans'
+            donatedOrgans:  
+              type: object
+              description: Donors organs to receive
+              $ref: '#/components/schemas/requiredOrgans'
+            medicalProcedures:  
+              type: object
+              description: Donors medical procedure information
+              $ref: '#/components/schemas/medicalProcedures'
+            contactDetails:  
+              type: object
+              description: Donors contact information
+              $ref: '#/components/schemas/contactDetails'
+            emergencyContactDetails:  
+              type: object
+              description: Donors emergency contact information
+              $ref: '#/components/schemas/emergencyContactDetails'
+            modifications:  
+              type: object
+              description: Donors history of modifciations
+              $ref: '#/components/schemas/modifications'
+            userAttributeCollection:  
+              type: object
+              description: Donors personal attributes
+              $ref: '#/components/schemas/userAttributeCollection'
+            deathObject:  
+              type: object
+              description: Donors time and place of death
+              $ref: '#/components/schemas/deathObject'
+      
+          
+          
+  
+    tokenResponse:
+      type: object
+      properties:
+        token:
+          type: string
+          
+    username:
+      type: string
+    
+    search:
+      type: string
+    
+    searchName:
+      type: string
+    
+    index:
+      type: integer
+    
+    offset:
+      type: integer
+    
+    amount: 
+      type: integer
+      
+    staffId:
+      type: integer
+      description: Staff Id given to clinician. Is a unique number
+      format: int32
+      minimum: 0
+      
+    clinicianLogin:
+      type: object
+      properties:
+        staffId:
+          type: integer
+          description: Staff Id given to clinician. Is a unique number
+          format: int32
+          minimum: 0
+        password:
+          type: string
+    
+    adminLogin:
+      type: object
+      properties:
+        username:
+          type: string
+        password:
+          type: string
+        
+    getClinician:
+      type: object
+      properties:
+        givenName:
+          type: string
+        lastName:
+          type: string
+        staffId:
+          type: integer
+          description: Staff Id given to clinician. Is a unique number
+          format: int32
+          minimum: 0
+        password:
+          type: string
+        streetAddress:
+          type: string
+        region:
+          type: string
+        version:
+          type: integer
+        history:
+          type: array
+          items:
+            type: string
+    
+    postableClinician:
+      type: object
+      properties:
+        givenName:
+          type: string
+        lastName:
+          type: string
+        staffId:
+          type: integer
+          description: Staff Id given to clinician. Is a unique number
+          format: int32
+          minimum: 0
+        password:
+          type: string
+        streetAddress:
+          type: string
+        region:
+          type: string
+          
+    patchableClinician:
+      type: object
+      properties:
+        givenName:
+          type: string
+        lastName:
+          type: string
+        staffId:
+          type: integer
+          description: Staff Id given to clinician. Is a unique number
+          format: int32
+          minimum: 0
+        password:
+          type: string
+        streetAddress:
+          type: string
+        region:
+          type: string
+        version:
+          type: integer
+    
+    gettableClinician:
+      type: array
+      items:
+        type: object
+        properties:
+          staffId:
+            type: integer
+          givenName:
+            type: string
+          middleName:
+            type: string
+          lastName:
+            type: string
+          region:
+            type: string
+          
+              
+    gettableAdmin:
+      type: array
+      items:
+        type: object
+        properties:
+          username:
+            type: integer
+          givenName:
+            type: string
+          middleName:
+            type: string
+          lastName:
+            type: string
+          region:
+            type: string
+            
+    singleAdmin:
+      type: object
+      properties:
+        username:
+          type: integer
+        givenName:
+          type: string
+        middleName:
+          type: string
+        lastName:
+          type: string
+        region:
+          type: string
+        version:
+          type: integer
+          
+    
+    postableAdmin:
+      type: object
+      properties:
+        username:
+          type: integer
+        givenName:
+          type: string
+        middleName:
+          type: string
+        lastName:
+          type: string
+        password:
+          type: string
+    
+    patchableAdmin:
+      type: object
+      properties:
+        username:
+          type: integer
+        givenName:
+          type: string
+        middleName:
+          type: string
+        lastName:
+          type: string
+        password:
+          type: string
+        version:
+          type: integer
+        
+  securitySchemes:
+    token:
+      type: apiKey
+      name: token
+      in: header
+      
+      
+    petstore_auth:
+      type: oauth2
+      flows:
+        implicit:
+          authorizationUrl: 'http://petstore.swagger.io/oauth/dialog'
+          scopes:
+            'write:pets': modify pets in your account
+            'read:pets': read your pets
+    api_key:
+      type: apiKey
+      name: api_key
+      in: header

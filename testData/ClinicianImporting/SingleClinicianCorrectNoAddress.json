@@ -1,0 +1,24 @@
+{
+  "middleName" : "",
+  "lastName" : "Clinician",
+  "contactDetails" : {
+    "address" : {
+      "streetAddressLineOne" : null,
+      "streetAddressLineTwo" : null,
+      "suburb" : null,
+      "city" : null,
+      "region" : "",
+      "postCode" : "",
+      "countryCode" : null
+    },
+    "mobileNum" : null,
+    "homeNum" : null,
+    "email" : null
+  },
+  "password" : "password",
+  "modifications" : [ ],
+  "firstName" : "Test",
+  "userName" : 888,
+  "active" : true,
+  "version" : 1
+}

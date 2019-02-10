@@ -1,0 +1,74 @@
+@font-face {
+    font-family: Roboto;
+    src: url("../Roboto-Thin.ttf");
+}
+
+.root {
+    -fx-font-family: Roboto, "Cambria";
+}
+
+.button {
+    -fx-text-fill: black;
+    -fx-background-radius: 15;
+    -fx-background-color: #FFFDD0;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+.button:hover {
+    -fx-background-color: #A02121;
+}
+.button:pressed {
+    -fx-background-color: #890B0B;
+}
+
+.combo-box,
+.combo-box-base,
+.check-box {
+    -fx-text-fill: black;
+    -fx-background-color: #FFFDD0;
+}
+
+.root,
+.stack-pane,
+.scene,
+.text-field {
+    -fx-text-fill: black;
+    -fx-background-color: #FFFDD0;
+    -fx-font-family: "Comic Sans";
+}
+
+.table-view .table-cell  {
+    -fx-background-color: #FFFDD0;
+    -fx-text-fill: black;
+}
+.table-column {
+    -fx-text-fill: black;
+}
+
+
+.grid-pane {
+    -fx-background-color: #3a5a40;
+}
+
+.tab-pane {
+    -fx-background-color: #3a5a40;
+    -fx-text-fill: white;
+}
+
+#fun {
+    -fx-background-color: #400000;
+}
+
+.label {
+    -fx-text-fill: white;
+    -fx-font-family: "Comic Sans";
+}
+
+.text {
+    -fx-text-fill: white;
+    -fx-font-family: "Comic Sans";
+
+}
+
+
+

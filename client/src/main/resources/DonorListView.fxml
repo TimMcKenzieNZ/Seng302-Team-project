@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import seng302.controllers.HeaderlessTable?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="seng302.controllers.DonorListController">
+   <children>
+      <AnchorPane maxHeight="Infinity" maxWidth="Infinity" minHeight="625.0" minWidth="850.0" stylesheets="/CSS/donorList.css">
+         <children>
+            <GridPane maxHeight="Infinity" maxWidth="Infinity" minHeight="625.0" minWidth="850.0" prefHeight="625.0" prefWidth="850.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <columnConstraints>
+                <ColumnConstraints halignment="LEFT" hgrow="NEVER" maxWidth="Infinity" minWidth="212.0" prefWidth="212.0" />
+                  <ColumnConstraints halignment="LEFT" hgrow="ALWAYS" maxWidth="Infinity" minWidth="213.0" prefWidth="213.0" />
+                  <ColumnConstraints halignment="LEFT" hgrow="ALWAYS" maxWidth="Infinity" minWidth="213.0" prefWidth="123.0" />
+                  <ColumnConstraints halignment="LEFT" hgrow="ALWAYS" maxWidth="Infinity" minWidth="212.0" prefWidth="212.0" />
+                  <ColumnConstraints />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints maxHeight="34.0" minHeight="34.0" prefHeight="34.0" vgrow="NEVER" />
+                 <RowConstraints maxHeight="34.0" minHeight="34.0" prefHeight="34.0" vgrow="NEVER" />
+                  <RowConstraints maxHeight="105.0" minHeight="34.0" prefHeight="102.0" vgrow="NEVER" />
+                  <RowConstraints maxHeight="75.0" minHeight="0.0" prefHeight="9.0" vgrow="NEVER" />
+                 <RowConstraints maxHeight="Infinity" minHeight="385.0" prefHeight="467.0" vgrow="ALWAYS" />
+                  <RowConstraints maxHeight="50.0" minHeight="20.0" prefHeight="50.0" vgrow="NEVER" />
+                  <RowConstraints maxHeight="50.0" minHeight="20.0" prefHeight="20.0" vgrow="NEVER" />
+                  <RowConstraints maxHeight="34.0" minHeight="34.0" prefHeight="34.0" vgrow="NEVER" />
+              </rowConstraints>
+               <children>
+                  <Label alignment="CENTER" text="Donors" GridPane.columnSpan="4" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="deleteButton" maxHeight="30.0" maxWidth="140.0" minHeight="30.0" minWidth="140.0" mnemonicParsing="false" onAction="#deleteSelected" prefHeight="30.0" prefWidth="140.0" text="Delete" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER">
+                     <GridPane.margin>
+                        <Insets bottom="10.0" />
+                     </GridPane.margin></Button>
+                  <Button fx:id="backButton" maxHeight="30.0" maxWidth="140.0" minHeight="30.0" minWidth="140.0" mnemonicParsing="false" onAction="#backSelected" prefHeight="30.0" prefWidth="140.0" text="← Back to Home" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                  <HeaderlessTable fx:id="accountsList" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="230.0" prefHeight="421.0" prefWidth="830.0" GridPane.columnSpan="4" GridPane.halignment="CENTER" GridPane.hgrow="NEVER" GridPane.rowIndex="4" GridPane.valignment="CENTER" GridPane.vgrow="NEVER">
+                    <columns>
+                      <TableColumn fx:id="nameColumn" maxWidth="Infinity" minWidth="200.0" prefWidth="-1.0" resizable="false" text="Name" />
+                      <TableColumn fx:id="statusColumn" maxWidth="Infinity" minWidth="200.0" prefWidth="-1.0" resizable="false" text="Donor/Receiver" />
+                      <TableColumn fx:id="ageColumn" maxWidth="Infinity" minWidth="150.0" prefWidth="-1.0" resizable="false" text="Age" />
+                      <TableColumn fx:id="genderColumn" maxWidth="Infinity" minWidth="120.0" prefWidth="-1.0" resizable="false" text="Gender" />
+                      <TableColumn fx:id="regionColumn" maxWidth="Infinity" minWidth="150.0" prefWidth="-1.0" resizable="false" text="Region" />
+                    </columns>
+                     <GridPane.margin>
+                        <Insets left="10.0" right="10.0" top="-5.0" />
+                     </GridPane.margin>
+                  </HeaderlessTable>
+                  <TextField fx:id="searchField" prefHeight="0.0" prefWidth="269.0" promptText="Filter by name..." GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </GridPane.margin></TextField>
+                  <Pagination fx:id="pageControl" prefHeight="31.0" prefWidth="850.0" GridPane.columnSpan="4" GridPane.rowIndex="6" />
+                  <Button fx:id="nameOrder" maxWidth="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#updateNameOrder" prefHeight="29.0" prefWidth="205.0" text="Name" GridPane.columnSpan="1" GridPane.halignment="CENTER" GridPane.hgrow="NEVER" GridPane.rowIndex="3" GridPane.valignment="TOP" GridPane.vgrow="NEVER">
+                     <GridPane.margin>
+                        <Insets left="12.0" />
+                     </GridPane.margin></Button>
+                  <GridPane prefHeight="124.0" prefWidth="606.0" GridPane.columnIndex="1" GridPane.columnSpan="4" GridPane.rowIndex="3">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="Infinity" minWidth="113.0" prefWidth="178.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="Infinity" minWidth="93.0" prefWidth="106.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="Infinity" minWidth="113.0" prefWidth="122.0" />
+                        <ColumnConstraints maxWidth="169.0" minWidth="147.0" prefWidth="160.0" />
+                        <ColumnConstraints />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Button fx:id="statusOrder" maxWidth="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#updateStatusOrder" prefHeight="29.0" prefWidth="211.0" text="Donor/Receiver" GridPane.halignment="CENTER" GridPane.hgrow="NEVER" GridPane.valignment="TOP" GridPane.vgrow="NEVER" />
+                        <Button fx:id="ageOrder" maxWidth="-Infinity" minWidth="89.0" mnemonicParsing="false" onAction="#updateAgeOrder" prefHeight="29.0" prefWidth="129.0" text="Age" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="NEVER" GridPane.valignment="TOP" GridPane.vgrow="NEVER" />
+                        <Button fx:id="genderOrder" maxWidth="-Infinity" minWidth="99.0" mnemonicParsing="false" onAction="#updateGenderOrder" prefHeight="29.0" prefWidth="172.0" text="Gender" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="NEVER" GridPane.valignment="TOP" GridPane.vgrow="NEVER" />
+                        <Button fx:id="regionOrder" maxWidth="-Infinity" minWidth="141.0" mnemonicParsing="false" onAction="#updateRegionOrder" prefHeight="29.0" prefWidth="175.0" text="Region" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.hgrow="NEVER" GridPane.valignment="TOP" GridPane.vgrow="NEVER">
+                           <GridPane.margin>
+                              <Insets right="10.0" />
+                           </GridPane.margin></Button>
+                     </children>
+                  </GridPane>
+                  <Label fx:id="matches" alignment="CENTER" contentDisplay="CENTER" minWidth="600.0" prefHeight="50.0" prefWidth="602.0" text="accounts a-b&#10;x matching accounts" textAlignment="CENTER" textFill="#9e9e9e" GridPane.columnSpan="4" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                     <padding>
+                        <Insets bottom="10.0" />
+                     </padding>
+                  </Label>
+                  <GridPane prefHeight="34.0" prefWidth="176.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="71.0" minWidth="1.0" prefWidth="29.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="86.0" minWidth="10.0" prefWidth="58.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="57.0" minWidth="10.0" prefWidth="51.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="77.0" minWidth="10.0" prefWidth="34.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="77.0" minWidth="10.0" prefWidth="64.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="90.0" minWidth="10.0" prefWidth="53.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <TextField fx:id="filterMinAge" prefHeight="24.0" prefWidth="62.0" promptText="Min Age" GridPane.columnIndex="1" GridPane.columnSpan="2" />
+                        <TextField fx:id="filterMaxAge" prefHeight="25.0" prefWidth="71.0" promptText="Max Age" GridPane.columnIndex="4" GridPane.columnSpan="2">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <GridPane.margin>
+                              <Insets right="10.0" />
+                           </GridPane.margin></TextField>
+                     </children>
+                  </GridPane>
+                  <GridPane fx:id="check" GridPane.columnSpan="4" GridPane.rowIndex="2">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                      <children>
+                        <ComboBox fx:id="filterStatus" prefWidth="150.0" />
+                        <ComboBox fx:id="filterDonorOrgans" prefWidth="150.0" GridPane.columnIndex="1" />
+                        <ComboBox fx:id="filterReceiverOrgans" prefWidth="150.0" GridPane.columnIndex="2" />
+                        <ComboBox fx:id="filterBirthGender" prefWidth="150.0" GridPane.columnIndex="3" />
+                        <ComboBox fx:id="filterRegion" prefWidth="150.0" GridPane.columnIndex="4" />
+                      </children>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+      
+                  </GridPane>
+                  <Button fx:id="createDonorButton" maxHeight="30.0" maxWidth="140.0" minHeight="30.0" minWidth="140.0" mnemonicParsing="false" onAction="#createDonorPressed" prefHeight="30.0" prefWidth="140.0" text="Create Donor" GridPane.halignment="CENTER" GridPane.rowIndex="7">
+                     <GridPane.margin>
+                        <Insets bottom="10.0" />
+                     </GridPane.margin></Button>
+               </children>
+            </GridPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

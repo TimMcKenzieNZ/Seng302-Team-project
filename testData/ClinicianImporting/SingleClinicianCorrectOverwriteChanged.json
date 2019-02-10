@@ -1,0 +1,24 @@
+{
+  "middleName" : "Jeremy",
+  "lastName" : "Boyd",
+  "contactDetails" : {
+    "address" : {
+      "streetAddressLineOne" : "123 fake street",
+      "streetAddressLineTwo" : "",
+      "suburb" : "",
+      "city" : "",
+      "region" : "Christchurch",
+      "postCode" : "",
+      "countryCode" : ""
+    },
+    "mobileNum" : null,
+    "homeNum" : null,
+    "email" : null
+  },
+  "password" : "newPassword",
+  "modifications" : [ ],
+  "firstName" : "Timothy",
+  "userName" : 8888,
+  "active" : true,
+  "version" : 2
+}

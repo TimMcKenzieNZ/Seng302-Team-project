@@ -1,0 +1,75 @@
+{
+  "userAttributeCollection": {
+    "height": 0.0,
+    "weight": 0.0,
+    "bloodType": null,
+    "bodyMassIndexFlag": false,
+    "smoker": null,
+    "bloodPressure": null,
+    "alcoholConsumption": 0.0,
+    "chronicDiseases": null,
+    "bmi": 0.0
+  },
+  "donorOrganInventory": {
+    "liver": false,
+    "kidneys": false,
+    "pancreas": false,
+    "heart": false,
+    "lungs": false,
+    "intestine": false,
+    "corneas": false,
+    "middleEars": false,
+    "skin": false,
+    "bone": false,
+    "boneMarrow": false,
+    "connectiveTissue": false
+  },
+  "contactDetails": {
+    "addressStreet": "",
+    "addressCity": "",
+    "addressRegion": "West Coast",
+    "addressPostcode": "",
+    "mobileNumber": "",
+    "homeNumber": "",
+    "email": "",
+    "emergAddressStreet": "",
+    "emergAddressCity": "",
+    "emergAddressRegion": "",
+    "emergAddressPostcode": "",
+    "emergMobileNumber": "",
+    "emergHomeNumber": "",
+    "emergEmail": ""
+  },
+  "nhi": "XYZ0141",
+  "title": null,
+  "givenName": "Cecilie",
+  "otherName": "",
+  "lastName": "Fay",
+  "dateOfBirth": [
+    2012,
+    4,
+    10
+  ],
+  "gender": "F",
+  "creationTimeStamp": [
+    2018,
+    4,
+    26,
+    14,
+    18,
+    0,
+    266000000
+  ],
+  "livedInUKFlag": false,
+  "updateLog": [
+    "Account XYZ0141 (Cecilie Fay) created at 2018-04-26 14:18:00\n"
+  ],
+  "active": true,
+  "deathDetails" : {
+    "country" : "",
+    "region" : "",
+    "city" : "",
+    "doD" : null
+  },
+  "updateMessage": "waiting for new message"
+}

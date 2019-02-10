@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="623.0" prefWidth="208.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="seng302.controllers.administratorNavController">
+  <VBox layoutX="24.0" layoutY="22.0" prefHeight="623.0" prefWidth="243.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-10.0" AnchorPane.topAnchor="0.0">
+    <Label text="Options">
+      <font>
+        <Font name="System Bold" size="24.0" />
+      </font>
+    </Label>
+    <Label text="View Data">
+      <font>
+        <Font name="System Bold" size="18.0" />
+      </font>
+    </Label>
+    <Button mnemonicParsing="false" onAction="#viewDonorsButtonPressed" prefHeight="37.0" prefWidth="208.0" text="View Donors">
+      <font>
+        <Font size="16.0" />
+      </font>
+    </Button>
+    <Button mnemonicParsing="false" onAction="#viewCliniciansButtonPressed" prefHeight="37.0" prefWidth="208.0" text="View Clinicians">
+      <font>
+        <Font size="16.0" />
+      </font>
+    </Button>
+    <Button fx:id="viewAdministratorButton" mnemonicParsing="false" onAction="#viewAdminsButtonPressed" prefHeight="37.0" prefWidth="208.0" text="View Administrators" textAlignment="CENTER" wrapText="true">
+      <font>
+        <Font size="16.0" />
+      </font>
+    </Button>
+    <Button mnemonicParsing="false" onAction="#viewCountries" prefHeight="37.0" prefWidth="208.0" text="View Countries">
+      <font>
+        <Font size="16.0" />
+      </font>
+    </Button>
+    <Button mnemonicParsing="false" onAction="#viewGraphs" prefHeight="37.0" prefWidth="208.0" text="View Graphs">
+      <font>
+        <Font size="16.0" />
+      </font>
+    </Button>
+    <Label text="Import Users">
+      <font>
+        <Font name="System Bold" size="18.0" />
+      </font>
+    </Label>
+    <Button mnemonicParsing="false" onAction="#importUserDataButtonPressed" prefHeight="37.0" prefWidth="208.0" text="Import User Data" textAlignment="CENTER" wrapText="true">
+      <font>
+        <Font size="16.0" />
+      </font>
+    </Button>
+    <Label text="System Actions">
+      <font>
+        <Font name="System Bold" size="18.0" />
+      </font>
+    </Label>
+    <Button mnemonicParsing="false" onAction="#createCLIWindow" prefHeight="37.0" prefWidth="208.0" text="Command Line" textAlignment="CENTER" wrapText="true">
+      <font>
+        <Font size="16.0" />
+      </font>
+    </Button>
+    <Button mnemonicParsing="false" onAction="#createSystemLogWindow" prefHeight="37.0" prefWidth="208.0" text="View System Log" textAlignment="CENTER" wrapText="true">
+      <font>
+        <Font size="16.0" />
+      </font>
+    </Button>
+    <Label text="User Actions">
+      <font>
+        <Font name="System Bold" size="18.0" />
+      </font>
+    </Label>
+    <Button fx:id="logoutButton" alignment="BOTTOM_CENTER" mnemonicParsing="false" onAction="#logoutButtonPressed" prefHeight="37.0" prefWidth="208.0" text="Log Out" textAlignment="CENTER" wrapText="true">
+      <font>
+        <Font size="16.0" />
+      </font>
+    </Button>
+  </VBox>
+</AnchorPane>

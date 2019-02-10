@@ -1,0 +1,16 @@
+{
+  "firstName" : "Default",
+  "middleName" : "",
+  "lastName" : "Administrator",
+  "contactDetails" : {
+    "address" : null,
+    "mobileNum" : null,
+    "homeNum" : null,
+    "email" : null
+  },
+  "userName" : "Sudo",
+  "password" : "password",
+  "modifications" : [ ],
+  "active" : true,
+  "version" : 2
+}

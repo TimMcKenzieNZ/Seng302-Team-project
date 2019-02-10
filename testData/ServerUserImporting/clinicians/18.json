@@ -1,0 +1,33 @@
+{
+  "middleName" : null,
+  "lastName" : "McTester",
+  "contactDetails" : {
+    "address" : {
+      "streetAddressLineOne" : "55 Pound Road, Christchurch",
+      "streetAddressLineTwo" : "",
+      "suburbName" : "",
+      "cityName" : "",
+      "region" : "Canterbury",
+      "postCode" : "",
+      "countryCode" : ""
+    },
+    "mobileNum" : "",
+    "homeNum" : "",
+    "email" : ""
+  },
+  "password" : "password",
+  "creationDate" : [ 2018, 7, 19, 12, 21, 40, 277000000 ],
+  "modifications" : [ {
+    "accountModified" : "Tester McTester (Clinician, Staff ID: 18)",
+    "modifyingAccount" : "Default Administrator (Administrator, username: Sudo)",
+    "valChanged" : "created",
+    "originalVal" : null,
+    "changedVal" : null,
+    "changeTime" : [ 2018, 7, 19, 12, 21, 40, 277000000 ]
+  } ],
+  "givenName" : "Tester",
+  "userName" : "18",
+  "active" : true,
+  "version": 1,
+  "updateMessage" : "waiting for new message"
+}

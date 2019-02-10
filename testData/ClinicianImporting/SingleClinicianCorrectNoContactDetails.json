@@ -1,0 +1,16 @@
+{
+  "middleName" : "",
+  "lastName" : "Clinician",
+  "contactDetails" : {
+    "address" : null,
+    "mobileNum" : null,
+    "homeNum" : null,
+    "email" : null
+  },
+  "password" : "password",
+  "modifications" : [ ],
+  "firstName" : "Test",
+  "userName" : 888,
+  "active" : true,
+  "version" : 1
+}

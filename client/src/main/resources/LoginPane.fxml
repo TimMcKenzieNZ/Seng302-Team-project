@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<?import javafx.geometry.Insets?>
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="615.0" minWidth="800.0" prefHeight="600.0" prefWidth="800.0" stylesheets="/CSS/login.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="seng302.controllers.LoginController">
+   <children>
+      <GridPane alignment="CENTER" prefHeight="578.0" prefWidth="765.0" style="-fx-background-color: #f2f5f7;">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="285.0" minWidth="10.0" prefWidth="206.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="249.0" minWidth="10.0" prefWidth="188.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="249.0" minWidth="10.0" prefWidth="10.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="249.0" minWidth="10.0" prefWidth="198.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="263.0" minWidth="10.0" prefWidth="200.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="188.0" minHeight="10.0" prefHeight="112.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="247.0" minHeight="10.0" prefHeight="128.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="128.0" minHeight="0.0" prefHeight="43.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="129.0" minHeight="10.0" prefHeight="84.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="229.0" minHeight="10.0" prefHeight="105.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="168.0" minHeight="10.0" prefHeight="140.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+          <Text fx:id="welcomeMessage" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+            <font>
+              <Font name="System Bold" size="51.0" />
+            </font>
+            </Text>
+          <Label fx:id="errorLabel" alignment="CENTER" prefHeight="21.0" prefWidth="392.0" textAlignment="CENTER" textFill="#cc0a0a" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+            <font>
+              <Font size="24.0" />
+            </font>
+            </Label>
+          <TextField id="usernameTextField" fx:id="usernameTextField" alignment="CENTER" prefHeight="39.0" prefWidth="330.0" promptText="Username/NHI" style="-fx-background-radius: 10;" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="3">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </TextField>
+          <PasswordField fx:id="passwordField" alignment="CENTER" prefHeight="39.0" prefWidth="367.0" promptText="Password" style="-fx-background-radius: 10;" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="4">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </PasswordField>
+          <Button fx:id="loginButton" mnemonicParsing="false" onAction="#remoteLogin" prefHeight="39.0" prefWidth="197.0" text="Login" GridPane.columnIndex="3" GridPane.rowIndex="5" GridPane.valignment="TOP">
+            <font>
+              <Font size="18.0" />
+            </font>
+            </Button>
+          <Button fx:id="createDonorButton" alignment="CENTER" mnemonicParsing="false" onAction="#createDonor" prefHeight="39.0" prefWidth="197.0" text="Register" GridPane.columnIndex="1" GridPane.rowIndex="5" GridPane.valignment="TOP">
+            <font>
+              <Font size="18.0" />
+            </font>
+            </Button>
+            <ImageView fitHeight="95.0" fitWidth="357.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+               <image>
+                  <Image url="@images/logo.png" />
+               </image>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </ImageView>
+         </children>
+      </GridPane>
+   </children>
+</StackPane>

@@ -1,0 +1,15 @@
+{
+  "firstName" : "Command",
+  "middleName" : "Prompt",
+  "lastName" : "Overwrite",
+  "contactDetails" : {
+    "address" : null,
+    "mobileNum" : null,
+    "homeNum" : null,
+    "email" : null
+  },
+  "userName" : "Christchurch3",
+  "password" : "password",
+  "active" : true,
+  "version" : 1
+}

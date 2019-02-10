@@ -1,0 +1,49 @@
+{
+  "middleName": "",
+  "lastName": "Yagami",
+  "contactDetails": {
+    "address": {
+      "streetAddressLineOne": "Kanto region, Japan",
+      "streetAddressLineTwo": "",
+      "suburbName": "",
+      "cityName": "",
+      "region": "Tasman",
+      "postCode": "",
+      "countryCode": ""
+    },
+    "mobileNum": null,
+    "homeNum": null,
+    "email": null
+  },
+  "password": "password",
+  "creationDate": [
+    2018,
+    5,
+    3,
+    0,
+    28,
+    42,
+    207000000
+  ],
+  "modifications": [
+    {
+      "accountModified": "Light Yagami (Clinician, Staff ID: 3)",
+      "modifyingAccount": "Light Yagami (Clinician, Staff ID: 3)",
+      "valChanged": "region",
+      "originalVal": "Auckland",
+      "changedVal": "Tasman",
+      "changeTime": [
+        2018,
+        5,
+        20,
+        15,
+        35,
+        5,
+        101000000
+      ]
+    }
+  ],
+  "firstName": "Light",
+  "userName": "300",
+  "updateMessage": "waiting for new message"
+}

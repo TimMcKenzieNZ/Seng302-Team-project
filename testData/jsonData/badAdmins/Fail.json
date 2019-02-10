@@ -1,0 +1,17 @@
+{
+  "firstName" : "Default",
+  "middleName" : "",
+  "lastName" : "Administrator",
+  "contactDetails" : {
+    "address" : null,
+    "mobileNum" : null,
+    "homeNum" : null,
+    "email" : null
+  },
+  "userName" : "Fail",
+  "password" : "password",
+  "creationDate" : "Fail",
+  "modifications" : [ ],
+  "active" : true,
+  "version": 1
+}

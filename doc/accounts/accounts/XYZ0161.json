@@ -1,0 +1,75 @@
+{
+  "userAttributeCollection": {
+    "height": 0.0,
+    "weight": 0.0,
+    "bloodType": null,
+    "bodyMassIndexFlag": false,
+    "smoker": null,
+    "bloodPressure": null,
+    "alcoholConsumption": 0.0,
+    "chronicDiseases": null,
+    "bmi": 0.0
+  },
+  "donorOrganInventory": {
+    "liver": false,
+    "kidneys": false,
+    "pancreas": false,
+    "heart": false,
+    "lungs": false,
+    "intestine": false,
+    "corneas": false,
+    "middleEars": false,
+    "skin": false,
+    "bone": false,
+    "boneMarrow": false,
+    "connectiveTissue": false
+  },
+  "contactDetails": {
+    "addressStreet": "",
+    "addressCity": "",
+    "addressRegion": "",
+    "addressPostcode": "",
+    "mobileNumber": "",
+    "homeNumber": "",
+    "email": "",
+    "emergAddressStreet": "",
+    "emergAddressCity": "",
+    "emergAddressRegion": "",
+    "emergAddressPostcode": "",
+    "emergMobileNumber": "",
+    "emergHomeNumber": "",
+    "emergEmail": ""
+  },
+  "nhi": "XYZ0161",
+  "title": null,
+  "givenName": "Manjula",
+  "otherName": "",
+  "lastName": "Nunes",
+  "dateOfBirth": [
+    2015,
+    4,
+    14
+  ],
+  "gender": "O",
+  "creationTimeStamp": [
+    2018,
+    4,
+    26,
+    14,
+    19,
+    28,
+    25000000
+  ],
+  "livedInUKFlag": false,
+  "updateLog": [
+    "Account XYZ0161 (Manjula Nunes) created at 2018-04-26 14:19:28\n"
+  ],
+  "active": true,
+  "deathDetails" : {
+    "country" : "",
+    "region" : "",
+    "city" : "",
+    "doD" : null
+  },
+  "updateMessage": "waiting for new message"
+}

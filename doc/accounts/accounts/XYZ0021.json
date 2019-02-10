@@ -1,0 +1,75 @@
+{
+  "userAttributeCollection": {
+    "height": 0.0,
+    "weight": 0.0,
+    "bloodType": null,
+    "bodyMassIndexFlag": false,
+    "smoker": null,
+    "bloodPressure": null,
+    "alcoholConsumption": 0.0,
+    "chronicDiseases": null,
+    "bmi": 0.0
+  },
+  "donorOrganInventory": {
+    "liver": false,
+    "kidneys": false,
+    "pancreas": false,
+    "heart": false,
+    "lungs": false,
+    "intestine": false,
+    "corneas": false,
+    "middleEars": false,
+    "skin": false,
+    "bone": false,
+    "boneMarrow": false,
+    "connectiveTissue": false
+  },
+  "contactDetails": {
+    "addressStreet": "",
+    "addressCity": "",
+    "addressRegion": "",
+    "addressPostcode": "",
+    "mobileNumber": "",
+    "homeNumber": "",
+    "email": "",
+    "emergAddressStreet": "",
+    "emergAddressCity": "",
+    "emergAddressRegion": "",
+    "emergAddressPostcode": "",
+    "emergMobileNumber": "",
+    "emergHomeNumber": "",
+    "emergEmail": ""
+  },
+  "nhi": "XYZ0021",
+  "title": null,
+  "givenName": "Leontyne",
+  "otherName": "",
+  "lastName": "Amerighi",
+  "dateOfBirth": [
+    2012,
+    4,
+    25
+  ],
+  "gender": "\u0000",
+  "creationTimeStamp": [
+    2018,
+    4,
+    26,
+    14,
+    13,
+    11,
+    377000000
+  ],
+  "livedInUKFlag": false,
+  "updateLog": [
+    "Account XYZ0021 (Leontyne Amerighi) created at 2018-04-26 14:13:11\n"
+  ],
+  "active": true,
+  "updateMessage": "waiting for new message",
+  "deathDetails" : {
+    "country" : "",
+    "region" : "",
+    "city" : "",
+    "doD" : null
+  }
+}

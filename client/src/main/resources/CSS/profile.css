@@ -1,0 +1,435 @@
+@font-face {
+  font-family: Roboto;
+  src: url("../Roboto-Thin.ttf");
+}
+
+.root {
+  -fx-font-family: Roboto, "Cambria" !important;
+}
+
+.root,
+.pane,
+.anchor-pane {
+    -fx-background-color: #f2f5f7;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+    /*-fx-font-family: "Cambria";*/
+}
+.stack-pane {
+  -fx-background-color: #f2f5f7;
+  -fx-focus-color: transparent;
+  -fx-faint-focus-color: transparent;
+  /*-fx-font-family: "Cambria";*/
+}
+
+.scroll-pane,
+.scroll-pane .viewport,
+.scroll-pane .scroll-bar {
+	-fx-background-color: transparent;
+}
+.scroll-pane .scroll-bar .thumb {
+	-fx-background-color: #050066;
+}
+
+
+
+
+
+
+.button {
+	-fx-text-fill: black;
+	-fx-background-radius: 8;
+	-fx-border-color: #4286f4;
+	-fx-border-radius: 10;
+	-fx-background-color: white;
+}
+.button:hover {
+	-fx-background-color: #4286f4;
+}
+.button:pressed {
+	-fx-background-color: #efefef;
+}
+
+#bigDonorLabel {
+    -fx-background-radius: 20;
+    -fx-border-color: transparent;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+    -fx-text-fill: black;
+    /*-fx-font-family: "Cambria";*/
+    -fx-font-size: 30px;
+}
+
+
+.menu-bar,
+.menu,
+.menu-item,
+.context-menu {
+    -fx-border-width: 0px;
+    -fx-background-color: white;
+}
+.menu-item:hover {
+    -fx-background-color: #e2eeff;
+}
+
+
+.text-field,
+.combo-box-base,
+.combo-box > .list-cell {
+	-fx-background-color: white;
+	-fx-text-fill: black;
+	-fx-prompt-text-fill: #c0ccd6;
+}
+.combo-box-popup .list-view {
+    -fx-background-color: #666d72;
+}
+.combo-box-popup .list-view .list-cell {
+    -fx-background-color: white;
+	-fx-text-fill: black;
+}
+.combo-box-popup .list-view .list-cell:filled:selected, .combo-box-popup .list-view .list-cell:filled:hover {
+	-fx-background-color: #4286f4;
+}
+
+.combo-box-popup:selected {
+    -fx-background-color: #4286f4;
+}
+
+.combo-box-popup .list-view .list-cell:disabled {
+    -fx-background-color: #56636E;
+    -fx-text-fill: #C0C0C0;
+}
+
+.text-field {
+    -fx-border-color: #d8d8d8
+}
+
+.text-field:focused {
+	-fx-background-color: #93bbf9;
+	-fx-prompt-text-fill: white;
+	-fx-text-fill: white;
+}
+
+
+.table-view .column-header .label {
+    -fx-text-fill: #000000;
+    -fx-font-weight: bold;
+}
+
+
+.check-box .text {
+	-fx-fill: black;
+}
+.check-box .box {
+	-fx-background-color: white;
+	-fx-border-color: grey;
+}
+
+.check-box .box:hover {
+    -fx-background-color: #dbe8fc;
+    -fx-border-color: grey;
+}
+
+.check-box:selected .mark {
+    -fx-background-color: white;
+}
+
+.check-box:selected .box {
+    -fx-background-color: #1b71fc;
+}
+
+.check-box:disabled .box {
+    -fx-background-color: grey;
+}
+
+
+
+
+
+
+.separator {
+	-fx-background-color: transparent;
+}
+.separator .line {
+	-fx-border-width: 1px;
+	-fx-border-color: #4077a5;
+	-fx-background-color: transparent;
+}
+
+
+.label {
+	-fx-text-fill: black;
+}
+
+.split-pane {
+	-fx-background-color: transparent;
+}
+.split-pane .split-pane-divider {
+	-fx-background-color: transparent;
+}
+
+.progress-bar .track {
+	-fx-background-color: transparent;
+}
+.progress-bar .bar {
+	-fx-background-color: #4286f4;
+}
+
+
+.table-view .column-header-background,
+.tree-table-view .column-header-background,
+.tree-table-view .column-header-background > *,
+.table-view .column-header-background > *,
+.tree-table-view .column-header,
+.table-view .column-header,
+.table-view .column-header .label,
+.tree-table-view-row-cell,
+.table-view-row-cell,
+.tree-table-view .placeholder {
+	-fx-background-color: #0E4D92;
+	-fx-text-fill: white;
+	-fx-background-radius: 10 10 0 0 ;
+}
+
+
+.table-row-cell:odd {
+    -fx-background-color: white;
+}
+
+
+
+.table-row-cell:hover {
+    -fx-background-color: #c0ccd6;
+}
+
+
+.tree-view,
+.tree-table-view,
+.table-view,
+.table-view .filler,
+.tree-view:focused {
+	-fx-font-size: 14px;
+	-fx-focus-color: transparent;
+	-fx-faint-focus-color: transparent;
+	-fx-background-color: transparent;
+	-fx-box-border: hidden;
+	-fx-background-radius: 0px;
+	-fx-background-insets: 0px;
+}
+
+.list-view,
+.list-view > .virtual-flow > .scroll-bar,
+.table-view > .virtual-flow > .scroll-bar,
+.tree-table-view > .virtual-flow > .scroll-bar,
+.tree-view > .virtual-flow > .scroll-bar,
+.list-view > .virtual-flow > .corner,
+.table-view > .virtual-flow > .corner,
+.tree-table-view > .virtual-flow > .corner,
+.tree-view > .virtual-flow > .corner {
+	-fx-background-color: white;
+}
+
+.list-view:focused {
+  -fx-background-color: #0772ba, #0772ba;
+  -fx-background-insets: 0, 1;
+  -fx-padding: 1;
+}
+
+.list-view .virtual-flow .scroll-bar .thumb,
+.tree-view .virtual-flow .scroll-bar .thumb,
+.table-view .virtual-flow .scroll-bar .thumb,
+.tree-table-view .virtual-flow .scroll-bar .thumb {
+	-fx-background-color: #d6d6d6;
+}
+
+.list-cell,
+.table-cell,
+.tree-table-cell {
+	-fx-text-fill: black;
+}
+
+.table-row-cell{
+    -fx-border-color: white;
+    -fx-table-cell-border-color:white;
+}
+
+
+.list-view .list-cell,
+.tree-view .tree-cell,
+.table-row-cell,
+.tree-table-row-cell {
+	-fx-background-color: #e2eeff;
+}
+
+
+.list-view .list-cell:odd {
+    -fx-background-color: white;
+}
+
+.list-view .list-cell:hover{
+    -fx-background-color: #c0ccd6;
+}
+
+.list-view .list-cell:selected,
+.tree-view .tree-cell:selected,
+.table-row-cell:selected,
+.tree-table-row-cell:selected {
+	-fx-background-color: #4286f4;
+}
+
+.status-bar {
+	-fx-background-color: #2b506e;
+}
+
+.tab-pane .tab-header-area .tab-header-background {
+    -fx-opacity: 0;
+}
+
+.tab-pane .tab .anchor-pane .grid-pane {
+    -fx-background-color: red;
+}
+
+.tab {
+	-fx-background-color: white;
+	-fx-background-radius: 10 10 0 0;
+	-fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+
+.tab:hover {
+    -fx-background-color: #dbe8fc;
+}
+
+.tab:selected {
+    -fx-background-color: #e2eeff;
+    -fx-border-color: transparent;
+}
+
+.tab-label {
+	-fx-text-fill: black;
+}
+
+.menu-button {
+	-fx-background-color: white;
+	-fx-text-fill: #edf3f8;
+	-fx-prompt-text-fill: white;
+}
+
+
+
+.createButton {
+    -fx-text-fill: white;
+    -fx-background-radius: 20;
+    -fx-background-color: #4CAF50;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.createButton:hover {
+    -fx-background-color: #59c65d;
+}
+
+.createButton:pressed {
+    -fx-background-color: #459348;
+}
+
+
+.primaryButton {
+    -fx-text-fill: white;
+    -fx-background-radius: 20;
+    -fx-background-color: #1b71fc;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+    -fx-border-color: transparent;
+}
+.primaryButton:hover {
+    -fx-background-color: #5697ff;
+}
+.primaryButton:pressed {
+    -fx-background-color: #287bff;
+}
+
+.backButton{
+    -fx-border-color: #86d889;
+}
+
+.backButton:hover{
+    -fx-background-color: #86d889;
+}
+
+.redButton {
+    -fx-border-color: #d9534f;
+}
+
+.redButton:hover {
+    -fx-background-color: #ea9491;
+}
+
+.deleteButton {
+     -fx-border-color: transparent;
+     -fx-background-color: #d33d39;
+}
+
+.deleteButton:hover {
+     -fx-background-color: #d86965;
+}
+
+
+.deletePhotoButton {
+     -fx-border-color: transparent;
+     -fx-background-color: #ea9491;
+     -fx-text-fill: black;
+     -fx-font-size: 10;
+     -fx-background-radius: 8;
+     -fx-focus-color: transparent;
+     -fx-faint-focus-color: transparent;
+     -fx-border-color: transparent;
+     -fx-pref-height: 20px;
+}
+
+.deletePhotoButton:hover {
+     -fx-background-color: #d33d39;
+}
+
+
+.greenButton {
+    -fx-text-fill: black;
+    -fx-font-size: 10;
+    -fx-background-radius: 8;
+    -fx-background-color: #83d385;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+    -fx-border-color: transparent;
+    -fx-pref-height: 20px;
+}
+
+.greenButton:hover {
+    -fx-background-color: #4CAF50;
+}
+
+.greenButton:pressed {
+    -fx-background-color: #4CAF50;
+}
+
+.errorText {
+    -fx-text-fill: red;
+}
+
+.toolOnHover {
+  -fx-background-color: ORANGE;
+}
+
+#monthOrganList {
+  -fx-text-fill: BLACK;
+  -fx-border-color: #a2a5a7;
+  -fx-border-width: 2px;
+  -fx-background-color: #f2f5f7;
+  -fx-color: #f2f5f7;
+}
+
+#monthOrganList.content {
+  -fx-color: #f2f5f7;
+  -fx-background-color: #f2f5f7;
+}

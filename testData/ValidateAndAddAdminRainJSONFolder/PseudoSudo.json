@@ -1,0 +1,58 @@
+{
+  "firstName" : "Command",
+  "middleName" : "Prompt",
+  "lastName" : "Overwrite",
+  "contactDetails" : {
+    "address" : null,
+    "mobileNum" : null,
+    "homeNum" : null,
+    "email" : null
+  },
+  "userName" : "PseudoSudo",
+  "password" : "password",
+  "creationDate" : [ 2018, 5, 21, 9, 52, 16, 996000000 ],
+  "modifications" : [ {
+    "accountModified" : "Default Administrator (Administrator, username: PesudoSudo)",
+    "modifyingAccount" : "Default Administrator (Administrator, username: PesudoSudo)",
+    "valChanged" : "firstName",
+    "originalVal" : "Default",
+    "changedVal" : "Command",
+    "changeTime" : [ 2018, 5, 23, 20, 33, 7, 704000000 ]
+  }, {
+    "accountModified" : "Command Administrator (Administrator, username: PesudoSudo)",
+    "modifyingAccount" : "Command Administrator (Administrator, username: PesudoSudo)",
+    "valChanged" : "middleName",
+    "originalVal" : "",
+    "changedVal" : "Prompt",
+    "changeTime" : [ 2018, 5, 23, 20, 33, 7, 711000000 ]
+  }, {
+    "accountModified" : "Command Prompt Administrator (Administrator, username: PesudoSudo)",
+    "modifyingAccount" : "Command Prompt Administrator (Administrator, username: PesudoSudo)",
+    "valChanged" : "lastName",
+    "originalVal" : "Administrator",
+    "changedVal" : "Overwrite",
+    "changeTime" : [ 2018, 5, 23, 20, 33, 7, 712000000 ]
+  }, {
+    "accountModified" : "Command Prompt Overwrite (Administrator, username: PesudoSudo)",
+    "modifyingAccount" : "Command Prompt Overwrite (Administrator, username: PesudoSudo)",
+    "valChanged" : "userName",
+    "originalVal" : "PesudoSudo",
+    "changedVal" : "PseudoSudo",
+    "changeTime" : [ 2018, 5, 23, 20, 33, 7, 712000000 ]
+  }, {
+    "accountModified" : "Command Prompt Overwrite (Administrator, username: PseudoSudo)",
+    "modifyingAccount" : "Command Prompt Overwrite (Administrator, username: PseudoSudo)",
+    "valChanged" : "firstName",
+    "originalVal" : "Command",
+    "changedVal" : "Task Manager",
+    "changeTime" : [ 2018, 5, 23, 20, 36, 20, 519000000 ]
+  }, {
+    "accountModified" : "Task Manager Prompt Overwrite (Administrator, username: PseudoSudo)",
+    "modifyingAccount" : "Task Manager Prompt Overwrite (Administrator, username: PseudoSudo)",
+    "valChanged" : "firstName",
+    "originalVal" : "Task Manager",
+    "changedVal" : "Command",
+    "changeTime" : [ 2018, 5, 23, 21, 22, 55, 688000000 ]
+  } ],
+  "active" : true
+}

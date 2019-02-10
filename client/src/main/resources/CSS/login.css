@@ -1,0 +1,49 @@
+@font-face {
+    font-family: Roboto;
+    src: url("../Roboto-Thin.ttf");
+}
+
+.root {
+    -fx-font-family: Roboto, "Cambria";
+}
+
+.label{
+    -fx-font-family: "Capriola";
+}
+
+#loginButton {
+    -fx-text-fill: white;
+    -fx-background-radius: 20;
+    -fx-background-color: #1b71fc;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+    -fx-border-color: transparent;
+}
+#loginButton:hover {
+    -fx-background-color: #5697ff;
+}
+#loginButton:pressed {
+    -fx-background-color: #287bff;
+}
+
+
+#createDonorButton {
+    -fx-text-fill: white;
+    -fx-background-radius: 20;
+    -fx-background-color: #4CAF50;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+    -fx-border-color: transparent;
+}
+
+#createDonorButton:hover {
+    -fx-background-color: #59c65d;
+}
+
+#createDonorButton:pressed {
+    -fx-background-color: #459348;
+}
+
+
+
+

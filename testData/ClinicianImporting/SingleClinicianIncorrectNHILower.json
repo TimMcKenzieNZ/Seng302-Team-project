@@ -1,0 +1,24 @@
+{
+  "middleName" : "",
+  "lastName" : "Clinician",
+  "contactDetails" : {
+    "address" : {
+      "streetAddressLineOne" : "123fakestreet",
+      "streetAddressLineTwo" : "",
+      "suburb" : "",
+      "city" : "",
+      "region" : "Auckland",
+      "postCode" : "",
+      "countryCode" : ""
+    },
+    "mobileNum" : null,
+    "homeNum" : null,
+    "email" : null
+  },
+  "password" : "password",
+  "modifications" : [ ],
+  "firstName" : "Test",
+  "userName" : "abc1234",
+  "active" : true,
+  "version" : 1
+}

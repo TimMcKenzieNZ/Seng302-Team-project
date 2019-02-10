@@ -1,0 +1,1 @@
+INSERT INTO `DeathDetails` (`dateOfDeath`, `country`, `region`, `city`, `ddUsername`) VALUES (CURRENT_TIMESTAMP, 'New Zealand', 'Canterbury', 'Christchurch', 'AAA9999');

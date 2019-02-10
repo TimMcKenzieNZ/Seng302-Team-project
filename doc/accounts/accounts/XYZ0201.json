@@ -1,0 +1,75 @@
+{
+  "userAttributeCollection": {
+    "height": 0.0,
+    "weight": 0.0,
+    "bloodType": null,
+    "bodyMassIndexFlag": false,
+    "smoker": null,
+    "bloodPressure": null,
+    "alcoholConsumption": 0.0,
+    "chronicDiseases": null,
+    "bmi": 0.0
+  },
+  "donorOrganInventory": {
+    "liver": false,
+    "kidneys": false,
+    "pancreas": false,
+    "heart": false,
+    "lungs": false,
+    "intestine": false,
+    "corneas": false,
+    "middleEars": false,
+    "skin": false,
+    "bone": false,
+    "boneMarrow": false,
+    "connectiveTissue": false
+  },
+  "contactDetails": {
+    "addressStreet": "",
+    "addressCity": "",
+    "addressRegion": "Auckland",
+    "addressPostcode": "",
+    "mobileNumber": "",
+    "homeNumber": "",
+    "email": "",
+    "emergAddressStreet": "",
+    "emergAddressCity": "",
+    "emergAddressRegion": "",
+    "emergAddressPostcode": "",
+    "emergMobileNumber": "",
+    "emergHomeNumber": "",
+    "emergEmail": ""
+  },
+  "nhi": "XYZ0201",
+  "title": null,
+  "givenName": "Apolonia",
+  "otherName": "",
+  "lastName": "Bancroft",
+  "dateOfBirth": [
+    2013,
+    4,
+    23
+  ],
+  "gender": "\u0000",
+  "creationTimeStamp": [
+    2018,
+    4,
+    26,
+    14,
+    21,
+    22,
+    95000000
+  ],
+  "livedInUKFlag": false,
+  "updateLog": [
+    "Account XYZ0201 (Apolonia Bancroft) created at 2018-04-26 14:21:22\n"
+  ],
+  "active": true,
+  "deathDetails" : {
+    "country" : "",
+    "region" : "",
+    "city" : "",
+    "doD" : null
+  },
+  "updateMessage": "waiting for new message"
+}

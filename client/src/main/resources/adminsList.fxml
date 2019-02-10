@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+
+<StackPane xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="seng302.controllers.AdminsListController">
+   <children>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="625.0" minWidth="850.0" prefHeight="750.0" prefWidth="850.0">
+        <children>
+          <GridPane alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="616.0" prefWidth="838.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <columnConstraints>
+              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+              <RowConstraints maxHeight="204.0" minHeight="0.0" prefHeight="65.0" vgrow="SOMETIMES" />
+              <RowConstraints maxHeight="506.0" minHeight="10.0" prefHeight="55.0" vgrow="SOMETIMES" />
+              <RowConstraints maxHeight="543.0" minHeight="10.0" prefHeight="426.0" vgrow="SOMETIMES" />
+              <RowConstraints maxHeight="543.0" minHeight="10.0" prefHeight="83.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+              <AnchorPane prefHeight="51.0" prefWidth="850.0">
+                <children>
+                  <Label alignment="CENTER" layoutX="325.0" layoutY="20.0" prefHeight="35.0" prefWidth="200.0" text="Administrators" AnchorPane.leftAnchor="325.0" AnchorPane.rightAnchor="325.0" AnchorPane.topAnchor="20.0">
+                    <font>
+                      <Font size="24.0" />
+                    </font>
+                  </Label>
+                  <Button fx:id="backButton" layoutX="62.0" layoutY="20.0" mnemonicParsing="false" onAction="#backButtonPressed" prefHeight="35.0" prefWidth="131.0" text="← Back to Home" AnchorPane.leftAnchor="60.0" />
+                </children>
+              </AnchorPane>
+              <AnchorPane prefHeight="132.0" prefWidth="850.0" GridPane.rowIndex="1">
+                <children>
+                  <TextField fx:id="usernameFilterTextField" layoutX="434.0" layoutY="11.0" prefHeight="39.0" prefWidth="350.0" promptText="Filter by Username" AnchorPane.leftAnchor="434.0" AnchorPane.rightAnchor="66.0" />
+                  <TextField fx:id="nameFilterTextField" layoutX="65.0" layoutY="11.0" prefHeight="39.0" prefWidth="350.0" promptText="Filter by name" AnchorPane.leftAnchor="65.0" AnchorPane.rightAnchor="435.0" />
+                </children>
+              </AnchorPane>
+              <AnchorPane prefHeight="443.0" prefWidth="850.0" GridPane.rowIndex="2">
+                <children>
+                  <TableView fx:id="adminsTable" layoutX="67.0" layoutY="16.0" prefHeight="394.0" prefWidth="717.0" AnchorPane.leftAnchor="67.0" AnchorPane.rightAnchor="66.0">
+                    <columns>
+                      <TableColumn fx:id="nameColumn" editable="false" prefWidth="462.0" resizable="false" text="Name" />
+                      <TableColumn fx:id="usernameColumn" editable="false" prefWidth="253.0" resizable="false" text="Username" />
+                    </columns>
+                  </TableView>
+                        <Label fx:id="errorMessage" layoutX="67.0" layoutY="-5.0" />
+                </children>
+              </AnchorPane>
+              <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3">
+                <children>
+                  <Button fx:id="newAdminButton" layoutX="58.0" layoutY="15.0" mnemonicParsing="false" onAction="#newAdminButtonPressed" prefHeight="35.0" text="New Administrator" AnchorPane.leftAnchor="60.0" />
+                  <Button fx:id="deleteButton" layoutX="691.0" layoutY="15.0" mnemonicParsing="false" onAction="#deleteButtonPressed" prefHeight="35.0" prefWidth="97.0" text="Delete" AnchorPane.rightAnchor="60.0" />
+                  <Label fx:id="numAccountsLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="327.0" layoutY="-3.0" prefHeight="41.0" prefWidth="192.0" text="accounts a-b&#10;x matching accounts" textAlignment="CENTER" textFill="#9e9e9e">
+                    <padding>
+                      <Insets bottom="3.0" />
+                    </padding>
+                  </Label>
+                  <Pagination fx:id="adminPageController" layoutX="325.0" layoutY="29.0" maxPageIndicatorCount="1" prefHeight="48.0" prefWidth="200.0" />
+                </children>
+              </AnchorPane>
+            </children>
+          </GridPane>
+        </children>
+      </AnchorPane>
+   </children>
+</StackPane>

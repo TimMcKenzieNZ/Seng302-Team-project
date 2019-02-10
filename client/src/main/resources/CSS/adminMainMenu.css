@@ -1,0 +1,26 @@
+@font-face {
+    font-family: Roboto;
+    src: url("../Roboto-Thin.ttf");
+}
+
+.root {
+    -fx-font-family: Roboto, "Cambria";
+}
+
+
+.button {
+    -fx-border-color: transparent;
+
+}
+
+.button:hover {
+    -fx-text-fill: white;
+}
+
+#viewEditAdmin {
+    -fx-border-color: #4286f4;
+}
+
+#logoutButton {
+    -fx-border-color: #86d889;
+}

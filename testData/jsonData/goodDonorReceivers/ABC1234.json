@@ -1,0 +1,137 @@
+{
+  "firstName" : "Bobby",
+  "middleName" : "",
+  "lastName" : "McKBobington",
+  "contactDetails" : {
+    "address" : {
+      "streetAddressLineOne" : "",
+      "streetAddressLineTwo" : "",
+      "suburbName" : "",
+      "cityName" : "",
+      "region" : "",
+      "postCode" : "",
+      "countryCode" : "NZ"
+    },
+    "mobileNum" : "",
+    "homeNum" : "",
+    "email" : ""
+  },
+  "userName" : "ABC6789",
+  "password" : "password",
+  "modifications" : [ {
+    "accountModified" : "Bobby McKBobington (NHI: ABC6789)",
+    "modifyingAccount" : "Default Administrator (Administrator, username: Sudo)",
+    "valChanged" : "Imported from file.",
+    "originalVal" : "",
+    "changedVal" : "",
+    "changeTime" : [ 2018, 7, 27, 10, 20, 17, 858000000 ]
+  } ],
+  "creationDate" : [ 2018, 5, 15, 11, 33, 59, 605000000 ],
+  "emergencyContactDetails" : {
+    "address" : {
+      "streetAddressLineOne" : "",
+      "streetAddressLineTwo" : "",
+      "suburbName" : "",
+      "cityName" : "",
+      "region" : "",
+      "postCode" : "",
+      "countryCode" : "NZ"
+    },
+    "mobileNum" : "",
+    "homeNum" : "",
+    "email" : ""
+  },
+  "medications" : {
+    "currentMedications" : [ ],
+    "previousMedications" : [ ],
+    "medicationLog" : [ ]
+  },
+  "title" : null,
+  "userAttributeCollection" : {
+    "height" : 0.0,
+    "weight" : 0.0,
+    "bloodType" : null,
+    "bodyMassIndexFlag" : false,
+    "smoker" : false,
+    "bloodPressure" : "",
+    "alcoholConsumption" : 0.0,
+    "chronicDiseases" : "",
+    "bmi" : 0.0
+  },
+  "donorOrganInventory" : {
+    "liver" : false,
+    "kidneys" : false,
+    "pancreas" : false,
+    "heart" : false,
+    "lungs" : false,
+    "intestine" : false,
+    "corneas" : false,
+    "middleEars" : false,
+    "skin" : false,
+    "bone" : false,
+    "boneMarrow" : false,
+    "connectiveTissue" : false
+  },
+  "requiredOrgans" : {
+    "liver" : false,
+    "kidneys" : false,
+    "pancreas" : false,
+    "heart" : false,
+    "lungs" : false,
+    "intestine" : false,
+    "corneas" : false,
+    "middleEars" : false,
+    "skin" : false,
+    "bone" : false,
+    "boneMarrow" : false,
+    "connectiveTissue" : false,
+    "liverTimeStamp" : null,
+    "kidneysTimeStamp" : null,
+    "pancreasTimeStamp" : null,
+    "heartTimeStamp" : null,
+    "lungsTimeStamp" : null,
+    "intestineTimeStamp" : null,
+    "corneasTimeStamp" : null,
+    "middleEarsTimeStamp" : null,
+    "skinTimeStamp" : null,
+    "boneTimeStamp" : null,
+    "boneMarrowTimeStamp" : null,
+    "connectiveTissueTimeStamp" : null,
+    "organsInList" : [ false, false, false, false, false, false, false, false, false, false, false, false ]
+  },
+  "preferredName" : "",
+  "dateOfBirth" : [ 2018, 5, 14 ],
+  "gender" : "U",
+  "birthGender" : "U",
+  "creationTimeStamp" : [ 2018, 5, 15, 10, 7, 25, 223000000 ],
+  "livedInUKFlag" : false,
+  "updateLog" : [ {
+    "accountModified" : "Bobby McKBobington (NHI: ABC6789)",
+    "modifyingAccount" : "Default Administrator (Administrator, username: Sudo)",
+    "valChanged" : "deleted",
+    "originalVal" : null,
+    "changedVal" : null,
+    "changeTime" : [ 2018, 7, 18, 13, 22, 30, 490000000 ]
+  }, {
+    "accountModified" : "Bobby McKBobington (NHI: ABC6789)",
+    "modifyingAccount" : "Default Administrator (Administrator, username: Sudo)",
+    "valChanged" : "Imported from file.",
+    "originalVal" : "",
+    "changedVal" : "",
+    "changeTime" : [ 2018, 7, 27, 10, 20, 17, 858000000 ]
+  } ],
+  "active" : true,
+  "masterIllnessList" : [ ],
+  "medicalProcedures" : [ ],
+  "deathDetails" : {
+    "country" : "",
+    "region" : "",
+    "city" : "",
+    "doD" : null
+  },
+  "updateMessage" : "waiting for new message",
+  "activeFlag" : false,
+  "receiver" : false,
+  "dateOfDeath" : null,
+  "version": 1
+}

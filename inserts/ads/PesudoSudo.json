@@ -1,0 +1,23 @@
+{
+  "firstName": "Default",
+  "middleName": "",
+  "lastName": "Administrator",
+  "contactDetails": {
+    "address": null,
+    "mobileNum": null,
+    "homeNum": null,
+    "email": null
+  },
+  "userName": "PesudoSudo",
+  "password": "002",
+  "creationDate": [
+    2018,
+    5,
+    21,
+    9,
+    52,
+    16,
+    996000000
+  ],
+  "modifications": []
+}

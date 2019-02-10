@@ -1,0 +1,165 @@
+{
+  "firstName": "Krusty",
+  "middleName": "",
+  "lastName": "the Clown",
+  "contactDetails": {
+    "address": {
+      "streetAddressLineOne": null,
+      "streetAddressLineTwo": null,
+      "suburbName": null,
+      "cityName": null,
+      "region": null,
+      "postCode": "",
+      "countryCode": null
+    },
+    "mobileNum": null,
+    "homeNum": null,
+    "email": null
+  },
+  "userName": "KTY1234",
+  "password": null,
+  "modifications": [],
+  "creationDate": [
+    2018,
+    5,
+    21,
+    18,
+    26,
+    44,
+    291000000
+  ],
+  "emergencyContactDetails": {
+    "address": {
+      "streetAddressLineOne": null,
+      "streetAddressLineTwo": null,
+      "suburbName": null,
+      "cityName": null,
+      "region": null,
+      "postCode": "",
+      "countryCode": null
+    },
+    "mobileNum": null,
+    "homeNum": null,
+    "email": null
+  },
+  "medications": {
+    "currentMedications": [],
+    "previousMedications": [],
+    "medicationLog": []
+  },
+  "title": "unspecified",
+  "userAttributeCollection": {
+    "height": 0.0,
+    "weight": 0.0,
+    "bloodType": null,
+    "bodyMassIndexFlag": false,
+    "smoker": null,
+    "bloodPressure": "0/0",
+    "alcoholConsumption": 0.0,
+    "chronicDiseases": "",
+    "bmi": 0.0
+  },
+  "donorOrganInventory": {
+    "liver": false,
+    "kidneys": false,
+    "pancreas": false,
+    "heart": false,
+    "lungs": false,
+    "intestine": false,
+    "corneas": false,
+    "middleEars": false,
+    "skin": false,
+    "bone": false,
+    "boneMarrow": false,
+    "connectiveTissue": false
+  },
+  "requiredOrgans": {
+    "liver": false,
+    "kidneys": false,
+    "pancreas": false,
+    "heart": false,
+    "lungs": false,
+    "intestine": false,
+    "corneas": false,
+    "middleEars": false,
+    "skin": false,
+    "bone": false,
+    "boneMarrow": false,
+    "connectiveTissue": false,
+    "liverTimeStamp": null,
+    "kidneysTimeStamp": null,
+    "pancreasTimeStamp": null,
+    "heartTimeStamp": null,
+    "lungsTimeStamp": null,
+    "intestineTimeStamp": null,
+    "corneasTimeStamp": null,
+    "middleEarsTimeStamp": null,
+    "skinTimeStamp": null,
+    "boneTimeStamp": null,
+    "boneMarrowTimeStamp": null,
+    "connectiveTissueTimeStamp": null,
+    "currentDateTime": null,
+    "currentOrgan": null,
+    "organsInList": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
+  },
+  "preferredName": "",
+  "dateOfBirth": [
+    2018,
+    5,
+    14
+  ],
+  "gender": "\u0000",
+  "birthGender": "\u0000",
+  "creationTimeStamp": [
+    2018,
+    5,
+    21,
+    18,
+    26,
+    44,
+    291000000
+  ],
+  "livedInUKFlag": false,
+  "updateLog": [
+    {
+      "accountModified": "Krusty the Clown (NHI: KTY1234)",
+      "modifyingAccount": "Krusty the Clown (NHI: KTY1234)",
+      "valChanged": "created",
+      "originalVal": "",
+      "changedVal": "active",
+      "changeTime": [
+        2018,
+        5,
+        21,
+        18,
+        26,
+        44,
+        291000000
+      ]
+    }
+  ],
+  "active": true,
+  "masterIllnessList": [],
+  "medicalProcedures": [],
+  "updateMessage": "waiting for new message",
+  "deathDetails" : {
+    "country" : "",
+    "region" : "",
+    "city" : "",
+    "doD" : null
+  },
+  "receiver": false
+}

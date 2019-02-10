@@ -1,0 +1,27 @@
+{
+  "middleName" : "",
+  "lastName" : "Placeholder",
+  "contactDetails" : {
+    "address" : {
+      "streetAddressLineOne" : "University of Canterbury",
+      "streetAddressLineTwo" : "",
+      "suburbName" : "",
+      "cityName" : "",
+      "region" : "Canterbury",
+      "postCode" : "",
+      "countryCode" : ""
+    },
+    "mobileNum" : "",
+    "homeNum" : "",
+    "email" : ""
+  },
+  "password" : "password",
+  "creationDate" : [ 2018, 9, 7, 21, 9, 57, 53000000 ],
+  "modifications" : [ ],
+  "version" : 1,
+  "givenName" : "Default Clinician",
+  "userName" : "0",
+  "active" : true,
+  "version": 1,
+  "updateMessage" : "waiting for new message"
+}

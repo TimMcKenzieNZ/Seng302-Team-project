@@ -1,0 +1,16 @@
+Feature: Story 28 Title and bar status change indication
+
+  Scenario: The result of any action is displayed in the status bar
+    Given the user interface is open
+    When I perform an action
+    Then the result of that action is displayed in the status bar
+
+  Scenario: Each page contains an appropriate title
+    Given the user interface is open
+    Then each page should have an appropriate title
+
+  Scenario: If there are unsaved changes, the title should contain an asterisk
+    Given the user interface is open
+    When I perform an action
+    Then an asterisk should appear in the title bar
+    And the asterisk should disappear when I save

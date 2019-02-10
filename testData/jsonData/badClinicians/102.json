@@ -1,0 +1,26 @@
+{
+  "middleName" : 132321,
+  "lastName" : "Placeholder",
+  "contactDetails" : {
+    "address" : {
+      "streetAddressLineOne" : "workplace",
+      "streetAddressLineTwo" : null,
+      "suburbName" : null,
+      "cityName" : null,
+      "region" : "Northland",
+      "postCode" : "",
+      "countryCode" : null
+    },
+    "mobileNum" : null,
+    "homeNum" : null,
+    "email" : 21321
+  },
+  "password" : "password",
+  "creationDate" : "Test date",
+  "modifications" : [ ],
+  "firstName" : "Test Clinician",
+  "userName" : "102",
+  "active" : true,
+  "updateMessage" : "waiting for new message",
+  "version": 1
+}

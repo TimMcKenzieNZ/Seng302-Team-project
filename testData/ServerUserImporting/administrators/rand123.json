@@ -1,0 +1,25 @@
+{
+  "firstName" : "hello",
+  "middleName" : "",
+  "lastName" : "random",
+  "contactDetails" : {
+    "address" : {
+      "streetAddressLineOne" : "",
+      "streetAddressLineTwo" : "",
+      "suburbName" : "",
+      "region" : "",
+      "postCode" : "",
+      "countryCode" : "",
+      "cityName" : ""
+    },
+    "mobileNum" : "",
+    "homeNum" : "",
+    "email" : ""
+  },
+  "userName" : "rand123",
+  "password" : "password",
+  "creationDate" : [ 2018, 5, 21, 10, 45, 42, 276000000 ],
+  "modifications" : [ ],
+  "version" : 1,
+  "active" : true
+}

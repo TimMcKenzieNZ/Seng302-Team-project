@@ -1,0 +1,51 @@
+@font-face {
+    font-family: Roboto;
+    src: url("../Roboto-Thin.ttf");
+}
+
+.root {
+    -fx-font-family: Roboto, "Cambria";
+}
+
+#nameOrder, #nameButton {
+    -fx-background-color: #0E4D92;
+    -fx-text-fill: white;
+    -fx-border-color:transparent;
+    -fx-background-radius: 10 0 0 0 ;
+}
+
+#statusOrder, #ageOrder, #genderOrder, #regionOrder, #regionButton, #organButton {
+    -fx-background-color: #0E4D92;
+    -fx-text-fill: white;
+    -fx-border-color:transparent;
+    -fx-background-radius: 0;
+}
+
+#regionOrder, #dateButton {
+    -fx-background-color: #0E4D92;
+    -fx-text-fill: white;
+    -fx-border-color:transparent;
+    -fx-background-radius: 0 10 0 0 ;
+}
+
+.table-view *.increment-button,
+.table-view *.decrement-button,
+.table-view *.increment-arrow,
+.table-view *.decrement-arrow
+{
+    -fx-padding: 0;
+    -fx-shape: "";
+}
+
+
+.conflictingOrgans {
+    -fx-background-color: #ea9491;
+}
+
+.conflictingOrgans:hover {
+    -fx-background-color: #e8adab;
+}
+
+.conflictingOrgans:selected {
+    -fx-background-color: #e87e7a;
+}

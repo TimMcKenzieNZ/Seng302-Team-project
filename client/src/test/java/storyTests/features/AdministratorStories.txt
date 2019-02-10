@@ -1,0 +1,15 @@
+Feature: Story 32 Administrator
+
+  Scenario: The application is started for the first time
+    Given The user interface is open and I am on the login page.
+    When I log in as the default administrator with the given details: username "Sudo", password "001".
+    Then I should be in the Administrator window and can see the buttons: buttonOne "Command Line", buttonTwo "View Administrators".
+
+  Scenario: The administrator can can see and edit their details
+    Given There exits an admin user account with details: username "PseudoSudo", password "002".
+    When I have logged in as an administrator with the given details: username "PseudoSudo", password "002".
+    And From the admin main menu I click on the Edit button.
+    Then I can see my details in editable text boxes: firstName "Command", middleName "Prompt", lastName "Overwrite".
+    And I can edit my details and change: firstName "Task Manager".
+    And After pressing "Done" I should receive the confirmation message "Attribute(s) changed successfully. Please save the application to make the changes permanent.".
+

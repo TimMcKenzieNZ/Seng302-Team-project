@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.StackPane?>
+<StackPane stylesheets="/CSS/profile.css" minHeight="625.0" minWidth="850.0" prefHeight="-Infinity" prefWidth="-Infinity"
+  xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+  fx:controller="seng302.controllers.SystemLogController">
+  <children>
+    <ListView fx:id="logDisplay" minHeight="625.0" minWidth="850.0" prefHeight="-Infinity"
+      prefWidth="-Infinity"/>
+  </children>
+</StackPane>

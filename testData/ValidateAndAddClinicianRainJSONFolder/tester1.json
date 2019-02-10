@@ -1,0 +1,25 @@
+{
+  "middleName" : "",
+  "lastName" : "Yagami",
+  "contactDetails" : {
+    "address" : {
+      "streetAddressLineOne" : "Kanto region, Japan",
+      "streetAddressLineTwo" : "",
+      "suburbName" : "",
+      "cityName" : "",
+      "region" : "Auckland",
+      "postCode" : "",
+      "countryCode" : ""
+    },
+    "mobileNum" : null,
+    "homeNum" : null,
+    "email" : null
+  },
+  "password" : "password",
+  "creationDate" : [ 2018, 5, 3, 0, 28, 42, 207000000 ],
+  "modifications" : [ ],
+  "firstName" : "Light",
+  "userName" : "Tester1",
+  "active" : true,
+  "updateMessage" : "waiting for new message"
+}

@@ -1,0 +1,57 @@
+tag_checker:
+  stage: build
+  script:
+    - python3 tag_checker.py $CI_COMMIT_TAG
+  only:
+    - tags
+
+junit:
+  stage: test
+  script:
+    - mvn -B clean test
+
+recent-artifacts:
+  stage: deploy
+  script:
+    - mvn -B clean site package
+  artifacts:
+    paths:
+      - target/*.jar
+      - server/target/*.jar
+      - client/target/*.jar
+    expire_in: 1 week
+  except:
+    - tags
+
+# This defines the resources need to to create the Base Image which will run the server on the VM (using the Dockerfile instructions we specified).
+server-build-image:
+  stage: build
+  script:
+  - mvn -B clean package -Dmaven.test.skip=true  # Do we want to skip tests?
+  - echo $CI_COMMIT_SHA # Just echo the commit for now to check if it works
+#  - echo $CI_COMMIT_SHA > ./target/version # We use the server from the latest commit from the given branches and updates the version of the server
+  - docker-compose build # command to use the Dockerfile to run the build
+#  only:
+#  - master@seng302-2018/team-600 # This defines which branches in which the dockerfile will work with.
+
+server-deployment:
+  stage: deploy
+  script:
+  - docker stop team600_web_1 || echo "success" # testing the connection
+  - docker container prune -f # Stop the server
+  - docker-compose up -d # and restart it with the latest commit. D is the docker daemon that is the container for the image
+#  only:
+#  - master@seng302-2018/team-600 # This defines which branches in which the dockerfile will work with.
+
+release-artifacts:
+  stage: deploy
+  script:
+    - mvn -B clean site package
+  artifacts:
+    paths:
+      - target/*.jar
+      - server/target/*.jar
+      - client/target/*.jar
+    expire_in: 1 week
+  only:
+    - tags

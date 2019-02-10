@@ -1,0 +1,23 @@
+{
+  "middleName" : "Underwood",
+  "lastName" : "Gatherers",
+  "contactDetails" : {
+    "address" : {
+      "streetAddressLineOne" : "University of Canterbury",
+      "streetAddressLineTwo" : "",
+      "suburb" : "Ilam",
+      "city" : "",
+      "region" : "Wellington",
+      "postCode" : "8041",
+      "countryCode" : "64"
+    },
+    "mobileNum" : "0223456296",
+    "homeNum" : "",
+    "email" : "this@user.com"
+  },
+  "password" : "notAPassword",
+  "modifications" : [ ],
+  "firstName" : "Boyd",
+  "userName" : "3",
+  "active" : true
+}

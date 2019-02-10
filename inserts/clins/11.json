@@ -1,0 +1,49 @@
+{
+  "middleName": null,
+  "lastName": "Dr",
+  "contactDetails": {
+    "address": {
+      "streetAddressLineOne": "gone burgers  com",
+      "streetAddressLineTwo": null,
+      "suburbName": null,
+      "cityName": null,
+      "region": "Taranaki",
+      "postCode": "",
+      "countryCode": null
+    },
+    "mobileNum": null,
+    "homeNum": null,
+    "email": null
+  },
+  "password": "123456",
+  "creationDate": [
+    2018,
+    5,
+    21,
+    17,
+    22,
+    56,
+    107000000
+  ],
+  "modifications": [
+    {
+      "accountModified": "Dexter Dr (Clinician, Staff ID: 11)",
+      "modifyingAccount": "Default Clinician Placeholder (Clinician, Staff ID: 0)",
+      "valChanged": "created",
+      "originalVal": null,
+      "changedVal": null,
+      "changeTime": [
+        2018,
+        5,
+        21,
+        17,
+        22,
+        56,
+        107000000
+      ]
+    }
+  ],
+  "firstName": "Dexter",
+  "userName": "11",
+  "updateMessage": "waiting for new message"
+}

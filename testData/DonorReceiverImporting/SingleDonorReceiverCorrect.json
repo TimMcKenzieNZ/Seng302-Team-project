@@ -1,0 +1,157 @@
+{
+  "firstName" : "Sweeny",
+  "middleName" : "VeryReal",
+  "lastName" : "Todd",
+  "contactDetails" : {
+    "address" : {
+      "streetAddressLineOne" : "1 Fleet Street",
+      "streetAddressLineTwo" : "",
+      "suburbName" : "",
+      "cityName" : "Christchurch",
+      "region" : "Canterbury",
+      "postCode" : "5678",
+      "countryCode" : ""
+    },
+    "mobileNum" : "0220456543",
+    "homeNum" : "5452345",
+    "email" : "randomPerson92@gmail.com"
+  },
+  "userName" : "ABC9526",
+  "password" : "password",
+  "modifications" : [ ],
+  "creationDate" : [ 2018, 5, 16, 23, 31, 22, 191000000 ],
+  "emergencyContactDetails" : {
+    "address" : {
+      "streetAddressLineOne" : "31b Taylors Ave",
+      "streetAddressLineTwo" : "",
+      "suburbName" : "",
+      "cityName" : "Christchurch",
+      "region" : "Canterbury",
+      "postCode" : "8052",
+      "countryCode" : ""
+    },
+    "mobileNum" : "0213459876",
+    "homeNum" : "5458769",
+    "email" : "randomHelper93@yahoo.com"
+  },
+  "medications" : {
+    "currentMedications" : [ ],
+    "previousMedications" : [ ],
+    "medicationLog" : [ ]
+  },
+  "title" : "MR",
+  "userAttributeCollection" : {
+    "height" : 2.0,
+    "weight" : 51.0,
+    "bloodType" : "AB-",
+    "bodyMassIndexFlag" : false,
+    "smoker" : false,
+    "bloodPressure" : "10/10",
+    "alcoholConsumption" : 2.0,
+    "chronicDiseases" : "None",
+    "bmi" : 0.0
+  },
+  "donorOrganInventory" : {
+    "liver" : true,
+    "kidneys" : false,
+    "pancreas" : true,
+    "heart" : true,
+    "lungs" : false,
+    "intestine" : false,
+    "corneas" : true,
+    "middleEars" : false,
+    "skin" : true,
+    "bone" : false,
+    "boneMarrow" : true,
+    "connectiveTissue" : true
+  },
+  "requiredOrgans" : {
+    "liver" : false,
+    "kidneys" : false,
+    "pancreas" : false,
+    "heart" : false,
+    "lungs" : false,
+    "intestine" : false,
+    "corneas" : false,
+    "middleEars" : false,
+    "skin" : false,
+    "bone" : false,
+    "boneMarrow" : false,
+    "connectiveTissue" : false,
+    "liverTimeStamp" : null,
+    "kidneysTimeStamp" : null,
+    "pancreasTimeStamp" : null,
+    "heartTimeStamp" : null,
+    "lungsTimeStamp" : null,
+    "intestineTimeStamp" : null,
+    "corneasTimeStamp" : null,
+    "middleEarsTimeStamp" : null,
+    "skinTimeStamp" : null,
+    "boneTimeStamp" : null,
+    "boneMarrowTimeStamp" : null,
+    "connectiveTissueTimeStamp" : null,
+    "organsInList" : [ false, false, false, false, false, false, false, false, false, false, false, false ]
+  },
+  "preferredName" : "",
+  "dateOfBirth" : [ 1990, 12, 31 ],
+  "gender" : "M",
+  "birthGender" : "M",
+  "creationTimeStamp" : [ 2018, 3, 13, 14, 5, 26, 297434500 ],
+  "livedInUKFlag" : false,
+  "updateLog" : [ {
+    "accountModified" : "Sweeny Todd (NHI: ABC1234)",
+    "modifyingAccount" : "Sweeny Todd (NHI: ABC1234)",
+    "valChanged" : "livedInUKFlag",
+    "originalVal" : "false",
+    "changedVal" : "true",
+    "changeTime" : [ 2018, 8, 29, 12, 43, 7, 481000000 ]
+  }, {
+    "accountModified" : "Sweeny Todd (NHI: ABC1234)",
+    "modifyingAccount" : "Sweeny Todd (NHI: ABC1234)",
+    "valChanged" : "livedInUKFlag",
+    "originalVal" : "true",
+    "changedVal" : "false",
+    "changeTime" : [ 2018, 8, 29, 12, 43, 22, 945000000 ]
+  }, {
+    "accountModified" : "Sweeny Todd (NHI: ABC1234)",
+    "modifyingAccount" : "Sweeny Todd (NHI: ABC1234)",
+    "valChanged" : "livedInUKFlag",
+    "originalVal" : "false",
+    "changedVal" : "true",
+    "changeTime" : [ 2018, 8, 29, 12, 43, 29, 845000000 ]
+  }, {
+    "accountModified" : "Sweeny Todd (NHI: ABC1234)",
+    "modifyingAccount" : "Sweeny Todd (NHI: ABC1234)",
+    "valChanged" : "livedInUKFlag",
+    "originalVal" : "true",
+    "changedVal" : "false",
+    "changeTime" : [ 2018, 8, 29, 12, 50, 1, 854000000 ]
+  }, {
+    "accountModified" : "Sweeny Todd (NHI: ABC1234)",
+    "modifyingAccount" : "Sweeny Todd (NHI: ABC1234)",
+    "valChanged" : "livedInUKFlag",
+    "originalVal" : "false",
+    "changedVal" : "true",
+    "changeTime" : [ 2018, 8, 29, 12, 50, 17, 214000000 ]
+  }, {
+    "accountModified" : "Sweeny Todd (NHI: ABC1234)",
+    "modifyingAccount" : "Sweeny Todd (NHI: ABC1234)",
+    "valChanged" : "livedInUKFlag",
+    "originalVal" : "true",
+    "changedVal" : "false",
+    "changeTime" : [ 2018, 8, 29, 12, 50, 24, 78000000 ]
+  } ],
+  "active" : true,
+  "masterIllnessList" : [ ],
+  "medicalProcedures" : [ ],
+  "updateMessage" : "waiting for new message",
+  "activeFlag" : true,
+  "receiver" : false,
+  "deathDetails" : {
+    "country" : "",
+    "region" : "",
+    "city" : "",
+    "doD" : null
+  },
+  "version": 1
+}

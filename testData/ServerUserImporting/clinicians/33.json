@@ -1,0 +1,33 @@
+{
+  "middleName" : null,
+  "lastName" : "Smith",
+  "contactDetails" : {
+    "address" : {
+      "streetAddressLineOne" : "14 Poplar Lane, Christchurch",
+      "streetAddressLineTwo" : "",
+      "suburbName" : "",
+      "cityName" : "",
+      "region" : "Canterbury",
+      "postCode" : "",
+      "countryCode" : ""
+    },
+    "mobileNum" : "",
+    "homeNum" : "",
+    "email" : ""
+  },
+  "password" : "password",
+  "creationDate" : [ 2018, 7, 18, 12, 7, 8, 685000000 ],
+  "modifications" : [ {
+    "accountModified" : "Harry Smith (Clinician, Staff ID: 33)",
+    "modifyingAccount" : "Default Administrator (Administrator, username: Sudo)",
+    "valChanged" : "created",
+    "originalVal" : null,
+    "changedVal" : null,
+    "changeTime" : [ 2018, 7, 18, 12, 7, 8, 685000000 ]
+  } ],
+  "givenName" : "Harry",
+  "userName" : "33",
+  "active" : true,
+  "version": 1,
+  "updateMessage" : "waiting for new message"
+}

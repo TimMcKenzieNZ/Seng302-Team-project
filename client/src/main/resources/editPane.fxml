@@ -1,0 +1,716 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane alignment="CENTER" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="seng302.controllers.EditPaneController">
+   <children>
+      <AnchorPane maxHeight="Infinity" maxWidth="Infinity" minHeight="600.0" minWidth="800.0" style="-fx-background-color: #f2f5f7;" stylesheets="/CSS/profile.css">
+        <children>
+          <BorderPane minHeight="600.0" minWidth="400.0" prefHeight="750.0" prefWidth="500.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <center>
+              <AnchorPane>
+                <children>
+                  <TabPane fx:id="mainTabPane" minHeight="430" minWidth="-Infinity" prefHeight="430.0" prefWidth="800.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <tabs>
+                      <Tab text="Basic Information">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                              <GridPane alignment="CENTER" layoutX="1.0" layoutY="-6.0" prefHeight="506.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="195.0" minWidth="10.0" prefWidth="175.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="267.0" minWidth="10.0" prefWidth="200.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="331.0" minWidth="10.0" prefWidth="175.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="331.0" minWidth="10.0" prefWidth="175.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="319.0" minWidth="10.0" prefWidth="200.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints maxHeight="100.0" minHeight="10.0" prefHeight="49.0" vgrow="SOMETIMES" />
+                                  <RowConstraints maxHeight="102.0" minHeight="0.0" prefHeight="38.0" vgrow="SOMETIMES" />
+                                  <RowConstraints maxHeight="133.0" minHeight="10.0" prefHeight="37.0" vgrow="SOMETIMES" />
+                                  <RowConstraints maxHeight="152.0" minHeight="0.0" prefHeight="43.0" vgrow="SOMETIMES" />
+                                  <RowConstraints maxHeight="195.0" minHeight="10.0" prefHeight="51.0" vgrow="SOMETIMES" />
+                                  <RowConstraints maxHeight="187.0" minHeight="10.0" prefHeight="49.0" vgrow="SOMETIMES" />
+                                  <RowConstraints maxHeight="183.0" minHeight="10.0" prefHeight="64.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                <children>
+      
+                                  <Text fx:id="givenNamesText" strokeType="OUTSIDE" strokeWidth="0.0" text="First name(s):" wrappingWidth="112.13671875" />
+                                  <Text fx:id="lastNameText" strokeType="OUTSIDE" strokeWidth="0.0" text="Last name:" wrappingWidth="193.13671875" GridPane.rowIndex="1" />
+                                  <Text fx:id="dateOfBirthText" layoutX="10.0" layoutY="262.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date of birth:" wrappingWidth="193.13671875" GridPane.rowIndex="4" />
+                                  <Text fx:id="dateOfDeathText" layoutX="10.0" layoutY="361.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Death Details:" wrappingWidth="193.13671875" GridPane.rowIndex="6" />
+                                  <Text fx:id="genderText" layoutX="10.0" layoutY="438.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gender:" wrappingWidth="117.13671875" GridPane.rowIndex="5" />
+                                  <Text fx:id="heightText" layoutX="10.0" layoutY="515.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Height (m):" wrappingWidth="193.13671875" GridPane.columnIndex="3" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                    <GridPane.margin>
+                                      <Insets />
+                                    </GridPane.margin>
+                                  </Text>
+                                  <Text fx:id="weightText" layoutX="10.0" layoutY="592.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Weight (kg):" wrappingWidth="193.13671875" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                    <GridPane.margin>
+                                      <Insets />
+                                    </GridPane.margin>
+                                  </Text>
+                                  <Text fx:id="bloodTypeText" layoutX="10.0" layoutY="550.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Blood type:" wrappingWidth="249.13671875" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                    <GridPane.margin>
+                                      <Insets />
+                                    </GridPane.margin>
+                                  </Text>
+      
+                                  <Text fx:id="nhiText" strokeType="OUTSIDE" strokeWidth="0.0" text="NHI number:" wrappingWidth="104.13671875" GridPane.rowIndex="3" />
+                                  <Text fx:id="ukFranceText" strokeType="OUTSIDE" strokeWidth="0.0" text="Lived in UK/France 1980-96: " wrappingWidth="114.13671875" GridPane.columnIndex="3" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                                    <GridPane.margin>
+                                      <Insets />
+                                    </GridPane.margin>
+                                  </Text>
+                                  <TextField fx:id="editGivenNames" GridPane.columnIndex="1" />
+                                  <TextField fx:id="editLastName" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                  <TextField fx:id="editNHINumber" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                  <TextField fx:id="editHeight" prefHeight="25.0" prefWidth="197.0" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                                  <TextField fx:id="editWeight" prefHeight="25.0" prefWidth="191.0" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                                  <CheckBox fx:id="editLivedInUKFrance" mnemonicParsing="false" onAction="#checkBoxEvent" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+                                  <DatePicker fx:id="editDateOfBirth" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                  <Text fx:id="titleText" strokeType="OUTSIDE" strokeWidth="0.0" text="Title: " GridPane.columnIndex="3">
+                                    <GridPane.margin>
+                                      <Insets />
+                                    </GridPane.margin>
+                                  </Text>
+                                  <ChoiceBox fx:id="editGender" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                  <ChoiceBox fx:id="editBloodType" prefWidth="150.0" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+                                  <ChoiceBox fx:id="editTitle" prefWidth="150.0" GridPane.columnIndex="4" />
+                                  <TextField fx:id="editPreferredName" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                  <Text fx:id="preferredNameText" strokeType="OUTSIDE" strokeWidth="0.0" text="Preferred name:" wrappingWidth="193.13671875" GridPane.rowIndex="2" />
+                                  <ChoiceBox fx:id="editBirthGender" prefWidth="150.0" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+                                  <Text fx:id="birthGenderText" strokeType="OUTSIDE" strokeWidth="0.0" text="Birth gender:" wrappingWidth="117.13671875" GridPane.columnIndex="3" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
+                                  <Button fx:id="setDeathDetailsButton" mnemonicParsing="false" onAction="#setDeathDetails" prefHeight="25.0" prefWidth="186.0" text="Set Death Details" GridPane.columnIndex="1" GridPane.rowIndex="6" GridPane.valignment="TOP" />
+                                  <Button fx:id="clearDeathDetailsButton" mnemonicParsing="false" onAction="#clearDeathDetails" prefHeight="22.0" prefWidth="187.0" text="Clear Death Details" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="6" GridPane.valignment="BOTTOM" />
+                                </children>
+                                             <padding>
+                                                <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                                             </padding>
+                              </GridPane>
+                            </children>
+                          </AnchorPane>
+                        </content>
+                      </Tab>
+                      <Tab fx:id="contactDetailsTab" text="Contact Details">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                              <GridPane alignment="CENTER" layoutX="1.0" layoutY="-6.0" prefHeight="506.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="195.0" minWidth="10.0" prefWidth="175.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="267.0" minWidth="10.0" prefWidth="200.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="331.0" minWidth="10.0" prefWidth="175.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="331.0" minWidth="10.0" prefWidth="175.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="319.0" minWidth="10.0" prefWidth="200.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                <children>
+                                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Contact Details" GridPane.halignment="LEFT">
+                                    <font>
+                                      <Font name="System Bold" size="14.0" />
+                                    </font>
+                                  </Text>
+                                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Emergency Contact Details" wrappingWidth="178.0" GridPane.columnIndex="3">
+                                    <font>
+                                      <Font name="System Bold" size="14.0" />
+                                    </font>
+                                  </Text>
+                                  <Text fx:id="streetText" strokeType="OUTSIDE" strokeWidth="0.0" text="Street Address: " GridPane.rowIndex="1" />
+                                  <Text fx:id="cityText" strokeType="OUTSIDE" strokeWidth="0.0" text="City: " GridPane.rowIndex="2" />
+                                  <Text fx:id="regionText" strokeType="OUTSIDE" strokeWidth="0.0" text="Region: " GridPane.rowIndex="3" />
+                                  <Text fx:id="postcodeText" strokeType="OUTSIDE" strokeWidth="0.0" text="Postcode: " GridPane.rowIndex="4" />
+                                  <Text fx:id="mobileNumberText" strokeType="OUTSIDE" strokeWidth="0.0" text="Mobile Number: " GridPane.rowIndex="6" />
+                                  <Text fx:id="homeNumberText" strokeType="OUTSIDE" strokeWidth="0.0" text="Home Number: " GridPane.rowIndex="7" />
+                                  <Text fx:id="emailText" strokeType="OUTSIDE" strokeWidth="0.0" text="Email: " GridPane.rowIndex="8" />
+                                  <Text fx:id="emergStreetText" strokeType="OUTSIDE" strokeWidth="0.0" text="Street Address: " GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                                  <Text fx:id="emergCityText" strokeType="OUTSIDE" strokeWidth="0.0" text="City: " GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                                  <Text fx:id="emergRegionText" strokeType="OUTSIDE" strokeWidth="0.0" text="Region: " GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                                  <Text fx:id="emergPostcodeText" strokeType="OUTSIDE" strokeWidth="0.0" text="Postcode: " GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                                  <Text fx:id="emergMobileNumberText" strokeType="OUTSIDE" strokeWidth="0.0" text="Mobile Number: " GridPane.columnIndex="3" GridPane.rowIndex="6" />
+                                  <Text fx:id="emergHomeNumberText" strokeType="OUTSIDE" strokeWidth="0.0" text="Home Number: " GridPane.columnIndex="3" GridPane.rowIndex="7" />
+                                  <Text fx:id="emergEmailText" strokeType="OUTSIDE" strokeWidth="0.0" text="Email: " GridPane.columnIndex="3" GridPane.rowIndex="8" />
+                                  <TextField fx:id="editStreetAddress" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                  <TextField fx:id="editCity" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                  <TextField fx:id="editPostcode" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                  <TextField fx:id="editMobileNumber" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                  <TextField fx:id="editHomeNumber" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                                  <TextField fx:id="editEmail" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                                  <TextField fx:id="editEmergStreetAddress" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                                  <TextField fx:id="editEmergCity" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                                  <TextField fx:id="editEmergPostcode" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+                                  <TextField fx:id="editEmergMobileNumber" GridPane.columnIndex="4" GridPane.rowIndex="6" />
+                                  <TextField fx:id="editEmergHomeNumber" GridPane.columnIndex="4" GridPane.rowIndex="7" />
+                                  <TextField fx:id="editEmergEmail" GridPane.columnIndex="4" GridPane.rowIndex="8" />
+                                  <Text fx:id="countryText" strokeType="OUTSIDE" strokeWidth="0.0" text="Country: " GridPane.rowIndex="5" />
+                                  <Text fx:id="emergCountryText" strokeType="OUTSIDE" strokeWidth="0.0" text="Country: " GridPane.columnIndex="3" GridPane.rowIndex="5" />
+                                  <ChoiceBox fx:id="editCountry" maxWidth="305.0" minWidth="10.0" onMouseClicked="#updateRegions" prefWidth="278.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                  <ChoiceBox fx:id="editEmergCountry" maxWidth="333.0" minWidth="10.0" prefWidth="294.0" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+                                  <ChoiceBox fx:id="editRegion" maxWidth="305.0" minWidth="10.0" prefWidth="278.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                  <ChoiceBox fx:id="editEmergRegion" maxWidth="333.0" minWidth="10.0" prefWidth="294.0" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+                                </children>
+                                             <padding>
+                                                <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                                             </padding>
+                                             <opaqueInsets>
+                                                <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                                             </opaqueInsets>
+                              </GridPane>
+                            </children>
+                          </AnchorPane>
+                        </content>
+                      </Tab>
+                      <Tab text="Organs">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="400.0" prefWidth="756.0">
+                            <children>
+                              <TabPane fx:id="organTabPane" prefHeight="549.0" prefWidth="800.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <tabs>
+                                  <Tab text="Donating">
+                                    <content>
+                                      <AnchorPane minHeight="0.0" minWidth="800.00" prefHeight="180.0" prefWidth="200.0">
+                                        <children>
+                                          <GridPane alignment="CENTER" prefHeight="380" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <columnConstraints>
+                                                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                            <children>
+                                              <Text fx:id="editLiverText" strokeType="OUTSIDE" strokeWidth="0.0" text="Liver:" wrappingWidth="112.13671875" GridPane.columnIndex="1" />
+                                              <Text fx:id="editKidneyText" strokeType="OUTSIDE" strokeWidth="0.0" text="Kidney:" wrappingWidth="111.13671875" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                              <Text fx:id="editLungText" strokeType="OUTSIDE" strokeWidth="0.0" text="Lung:" wrappingWidth="107.13671875" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                              <Text fx:id="editIntestineText" strokeType="OUTSIDE" strokeWidth="0.0" text="Intestines:" wrappingWidth="110.13671875" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                              <Text fx:id="editCorneaText" strokeType="OUTSIDE" strokeWidth="0.0" text="Cornea:" wrappingWidth="114.13671875" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                              <Text fx:id="editMiddleEarText" strokeType="OUTSIDE" strokeWidth="0.0" text="Middle Ear:" wrappingWidth="117.13671875" GridPane.columnIndex="4" />
+                                              <Text fx:id="editSkinText" strokeType="OUTSIDE" strokeWidth="0.0" text="Skin:" wrappingWidth="103.13671875" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                                              <Text fx:id="editBoneText" strokeType="OUTSIDE" strokeWidth="0.0" text="Bone:" wrappingWidth="111.13671875" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                                              <Text fx:id="editBoneMarrowText" strokeType="OUTSIDE" strokeWidth="0.0" text="Bone Marrow:" wrappingWidth="109.13671875" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+                                              <Text fx:id="editConnectiveTissueText" strokeType="OUTSIDE" strokeWidth="0.0" text="Connective Tissue:" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+                                              <Text fx:id="editPancreasText" strokeType="OUTSIDE" strokeWidth="0.0" text="Pancreas:" wrappingWidth="109.13671875" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+                                              <Text fx:id="editHeartText" strokeType="OUTSIDE" strokeWidth="0.0" text="Heart:" wrappingWidth="104.13671875" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                              <CheckBox fx:id="editLiver" mnemonicParsing="false" onAction="#checkBoxEvent" prefHeight="17.0" prefWidth="0.0" GridPane.columnIndex="2" GridPane.valignment="CENTER" />
+                                              <CheckBox fx:id="editKidney" mnemonicParsing="false" onAction="#checkBoxEvent" GridPane.columnIndex="2" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                                              <CheckBox fx:id="editHeart" mnemonicParsing="false" onAction="#checkBoxEvent" GridPane.columnIndex="2" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                                              <CheckBox fx:id="editLung" mnemonicParsing="false" onAction="#checkBoxEvent" GridPane.columnIndex="2" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                                              <CheckBox fx:id="editIntestine" mnemonicParsing="false" onAction="#checkBoxEvent" GridPane.columnIndex="2" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+                                              <CheckBox fx:id="editCornea" mnemonicParsing="false" onAction="#checkBoxEvent" GridPane.columnIndex="2" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
+                                              <CheckBox fx:id="editMiddleEar" mnemonicParsing="false" onAction="#checkBoxEvent" GridPane.columnIndex="5" GridPane.valignment="CENTER" />
+                                              <CheckBox fx:id="editSkin" mnemonicParsing="false" onAction="#checkBoxEvent" GridPane.columnIndex="5" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                                              <CheckBox fx:id="editBone" mnemonicParsing="false" onAction="#checkBoxEvent" GridPane.columnIndex="5" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                                              <CheckBox fx:id="editBoneMarrow" mnemonicParsing="false" onAction="#checkBoxEvent" GridPane.columnIndex="5" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                                              <CheckBox fx:id="editConnectiveTissue" mnemonicParsing="false" onAction="#checkBoxEvent" GridPane.columnIndex="5" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+                                              <CheckBox fx:id="editPancreas" mnemonicParsing="false" onAction="#checkBoxEvent" GridPane.columnIndex="5" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
+                                            </children>
+                                                               <padding>
+                                                                  <Insets bottom="15.0" left="15.0" right="30.0" top="15.0" />
+                                                               </padding>
+                                          </GridPane>
+                                        </children>
+                                      </AnchorPane>
+                                    </content>
+                                  </Tab>
+                                  <Tab fx:id="receiverTab" text="Receiving">
+                                    <content>
+                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="475.0" prefWidth="800.0">
+                                        <children>
+                                          <GridPane alignment="CENTER" prefHeight="380" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <columnConstraints>
+                                                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                            <children>
+                                              <Text fx:id="editReceiverLiverText" strokeType="OUTSIDE" strokeWidth="0.0" text="Liver:" GridPane.columnIndex="1" />
+                                              <Text fx:id="editReceiverKidneyText" strokeType="OUTSIDE" strokeWidth="0.0" text="Kidney:" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                              <Text fx:id="editReceiverHeartText" strokeType="OUTSIDE" strokeWidth="0.0" text="Heart:" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                              <Text fx:id="editReceiverLungText" strokeType="OUTSIDE" strokeWidth="0.0" text="Lung:" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                              <Text fx:id="editReceiverIntestineText" strokeType="OUTSIDE" strokeWidth="0.0" text="Intestines:" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                              <Text fx:id="editReceiverCorneaText" strokeType="OUTSIDE" strokeWidth="0.0" text="Cornea:" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                              <Text fx:id="editReceiverMiddleEarText" strokeType="OUTSIDE" strokeWidth="0.0" text="Middle Ear:" GridPane.columnIndex="4" />
+                                              <Text fx:id="editReceiverSkinText" strokeType="OUTSIDE" strokeWidth="0.0" text="Skin: " GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                                              <Text fx:id="editReceiverBoneText" strokeType="OUTSIDE" strokeWidth="0.0" text="Bone: " GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                                              <Text fx:id="editReceiverBoneMarrowText" strokeType="OUTSIDE" strokeWidth="0.0" text="Bone Marrow:" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+                                              <Text fx:id="editReceiverConnectiveTissueText" strokeType="OUTSIDE" strokeWidth="0.0" text="Connective Tissue:" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+                                              <Text fx:id="editReceiverPancreasText" strokeType="OUTSIDE" strokeWidth="0.0" text="Pancreas:" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+                                              <CheckBox fx:id="editReceiverLiver" mnemonicParsing="false" onAction="#checkBoxEvent" GridPane.columnIndex="2" GridPane.valignment="CENTER" />
+                                              <CheckBox fx:id="editReceiverKidney" mnemonicParsing="false" onAction="#checkBoxEvent" GridPane.columnIndex="2" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                                              <CheckBox fx:id="editReceiverHeart" mnemonicParsing="false" onAction="#checkBoxEvent" GridPane.columnIndex="2" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                                              <CheckBox fx:id="editReceiverLung" mnemonicParsing="false" onAction="#checkBoxEvent" GridPane.columnIndex="2" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                                              <CheckBox fx:id="editReceiverIntestine" mnemonicParsing="false" onAction="#checkBoxEvent" GridPane.columnIndex="2" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+                                              <CheckBox fx:id="editReceiverCornea" mnemonicParsing="false" onAction="#checkBoxEvent" GridPane.columnIndex="2" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
+                                              <CheckBox fx:id="editReceiverMiddleEar" mnemonicParsing="false" onAction="#checkBoxEvent" GridPane.columnIndex="5" GridPane.valignment="CENTER" />
+                                              <CheckBox fx:id="editReceiverSkin" mnemonicParsing="false" onAction="#checkBoxEvent" GridPane.columnIndex="5" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                                              <CheckBox fx:id="editReceiverBone" mnemonicParsing="false" onAction="#checkBoxEvent" GridPane.columnIndex="5" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                                              <CheckBox fx:id="editReceiverBoneMarrow" mnemonicParsing="false" onAction="#checkBoxEvent" GridPane.columnIndex="5" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                                              <CheckBox fx:id="editReceiverConnectiveTissue" mnemonicParsing="false" onAction="#checkBoxEvent" GridPane.columnIndex="5" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+                                              <CheckBox fx:id="editReceiverPancreas" mnemonicParsing="false" onAction="#checkBoxEvent" GridPane.columnIndex="5" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
+                                            </children>
+                                                               <padding>
+                                                                  <Insets bottom="15.0" left="15.0" right="30.0" top="15.0" />
+                                                               </padding>
+                                          </GridPane>
+                                        </children>
+                                      </AnchorPane>
+                                    </content>
+                                  </Tab>
+                                </tabs>
+                              </TabPane>
+                            </children>
+                          </AnchorPane>
+                        </content>
+                      </Tab>
+                      <Tab fx:id="medicationsTab" text="Medications">
+                        <content>
+                          <AnchorPane maxHeight="Infinity" maxWidth="Infinity" minHeight="0.0" minWidth="0.0" prefHeight="401.0" prefWidth="800.0">
+                            <children>
+                              <GridPane alignment="CENTER" layoutX="8.0" prefHeight="551.0" prefWidth="793.0" AnchorPane.bottomAnchor="-2.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="-1.0" AnchorPane.topAnchor="0.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="150.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="150.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="150.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="100" minWidth="80.0" prefWidth="100.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="150.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="150.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="150.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="40" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="40" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="40" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="40" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="40" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="40" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="40" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                <children>
+                                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Current Medications:" GridPane.rowIndex="1" />
+                                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Previous Medications:" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+                                  <ListView fx:id="editCurrentMedications" prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="3" GridPane.rowIndex="2" GridPane.rowSpan="5" />
+                                  <ListView fx:id="editPreviousMedications" prefHeight="455.0" prefWidth="303.0" GridPane.columnIndex="4" GridPane.columnSpan="3" GridPane.rowIndex="2" GridPane.rowSpan="5" />
+                                  <Button fx:id="moveToCurrent" mnemonicParsing="false" onAction="#movePreviousToCurrent" prefHeight="1.0" prefWidth="62.0" text="&lt;&lt;" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
+                                  <Button fx:id="moveToPrevious" alignment="CENTER" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#moveCurrentToPrevious" prefHeight="9.0" prefWidth="62.0" text="&gt;&gt;" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+                                  <Button fx:id="removeMedication" mnemonicParsing="false" onAction="#removeCurrentPreviousMedication" text="Remove" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="New Medication:" />
+                                  <ComboBox fx:id="createNewMedication" editable="true" prefHeight="27.0" prefWidth="600" GridPane.columnIndex="1" GridPane.columnSpan="5" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER">
+                                                   <GridPane.margin>
+                                                      <Insets />
+                                                   </GridPane.margin></ComboBox>
+                                  <Button fx:id="addMedication" mnemonicParsing="false" onAction="#addCurrentMedication" text="Add" GridPane.columnIndex="6" GridPane.halignment="CENTER" />
+                                </children>
+                                             <padding>
+                                                <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                                             </padding>
+                              </GridPane>
+                            </children>
+                          </AnchorPane>
+                        </content>
+                      </Tab>
+                      <Tab fx:id="medicalHistoryTab" text="Medical History">
+                        <content>
+                                    <AnchorPane>
+                                       <children>
+                                <GridPane alignment="CENTER" maxHeight="Infinity" maxWidth="Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="502.0" prefWidth="793.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                  <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                  </columnConstraints>
+                                  <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  </rowConstraints>
+                                  <children>
+                                    <Text fx:id="smokerText" strokeType="OUTSIDE" strokeWidth="0.0" text="Smoker:" GridPane.columnIndex="1" GridPane.valignment="CENTER" />
+                                    <Text fx:id="alcoholConsumptionText" strokeType="OUTSIDE" strokeWidth="0.0" text="Alcohol Consumption:" wrappingWidth="125.642578125" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                                    <Text fx:id="bloodPressureText" strokeType="OUTSIDE" strokeWidth="0.0" text="Blood Pressure:" GridPane.columnIndex="1" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                                    <TextField fx:id="editAlcoholConsumption" GridPane.columnIndex="2" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                                    <TextField fx:id="editBloodPressure" GridPane.columnIndex="2" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                                    <CheckBox fx:id="editSmoker" mnemonicParsing="false" onAction="#checkBoxEvent" GridPane.columnIndex="2" GridPane.valignment="CENTER" />
+                                  </children>
+                                             <padding>
+                                                <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                                             </padding>
+                                </GridPane>
+                                       </children>
+                                    </AnchorPane>
+                        </content>
+                      </Tab>
+                      <Tab fx:id="diseasesTab" text="Illnesses">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="395.0" prefWidth="800.0">
+                            <children>
+                              <GridPane alignment="CENTER" prefHeight="551.0" prefWidth="793.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="182.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="48.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="189.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="17.0" prefWidth="18.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="181.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="35.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="170.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints maxHeight="231.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+                                  <RowConstraints maxHeight="231.0" minHeight="10.0" prefHeight="72.0" vgrow="SOMETIMES" />
+                                  <RowConstraints maxHeight="448.0" minHeight="10.0" prefHeight="108.0" vgrow="SOMETIMES" />
+                                  <RowConstraints maxHeight="448.0" minHeight="10.0" prefHeight="108.0" vgrow="SOMETIMES" />
+                                  <RowConstraints maxHeight="448.0" minHeight="10.0" prefHeight="96.0" vgrow="SOMETIMES" />
+                                  <RowConstraints maxHeight="448.0" minHeight="10.0" prefHeight="148.0" vgrow="SOMETIMES" />
+                                  <RowConstraints maxHeight="448.0" minHeight="10.0" prefHeight="148.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                <padding>
+                                  <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                                </padding>
+                                <children>
+                                  <TableView fx:id="currentTable" prefHeight="306.0" prefWidth="381.0" GridPane.columnSpan="3" GridPane.rowIndex="1" GridPane.rowSpan="5">
+                                    <columns>
+                                      <TableColumn fx:id="CurrentName" prefWidth="158.0" text="Name" />
+                                      <TableColumn fx:id="chronic" prefWidth="88.0" text="Chronic" />
+                                      <TableColumn fx:id="currentDate" prefWidth="98.0" text="Date" />
+                                    </columns>
+                                  </TableView>
+                                  <Label text="Current Diagnoses" GridPane.columnSpan="3" GridPane.halignment="CENTER">
+                                    <font>
+                                      <Font size="20.0" />
+                                    </font>
+                                  </Label>
+                                  <Label alignment="CENTER" contentDisplay="CENTER" text="Historic Diagnoses" GridPane.columnIndex="4" GridPane.columnSpan="3" GridPane.halignment="CENTER">
+                                    <font>
+                                      <Font size="20.0" />
+                                    </font>
+                                  </Label>
+                                  <Button fx:id="createIllnessButton" mnemonicParsing="false" onAction="#createDiagnosesButtonPressed" prefHeight="25.0" prefWidth="190.0" text="Create Diagnosis" GridPane.columnIndex="0" GridPane.rowIndex="6" />
+                                  <Button fx:id="deleteIllnessButton" mnemonicParsing="false" onAction="#deleteDiagnosisButtonPressed" prefHeight="26.0" prefWidth="190.0" text="Delete Selected Diagnosis" GridPane.columnIndex="6" GridPane.rowIndex="6" />
+                                  <Button fx:id="editCurrentIllnessButton" mnemonicParsing="false" onAction="#editCurrentDiagnosesButtonPressed" prefHeight="26.0" prefWidth="155.0" text="Edit Current Diagnosis" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+                                  <Button fx:id="editHistoricIllnessButton" mnemonicParsing="false" onAction="#editHistoricDiagnosesButtonPressed" prefHeight="26.0" prefWidth="190.0" text="Edit Historic Diagnosis" GridPane.columnIndex="4" GridPane.rowIndex="6" />
+                                  <TableView fx:id="historicTable" prefHeight="306.0" prefWidth="381.0" GridPane.columnIndex="4" GridPane.columnSpan="3" GridPane.rowIndex="1" GridPane.rowSpan="5">
+                                    <columns>
+                                      <TableColumn fx:id="historicName" prefWidth="225.0" text="Name" />
+                                      <TableColumn fx:id="historicDate" prefWidth="119.0" text="Date" />
+                                    </columns>
+                                  </TableView>
+                                </children>
+                              </GridPane>
+                            </children>
+                          </AnchorPane>
+                        </content>
+                      </Tab>
+                      <Tab fx:id="medicalProceduresTab" text="Procedures">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                              <GridPane alignment="CENTER" prefHeight="551.0" prefWidth="793.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="150.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="150.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="150.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="100" minWidth="80.0" prefWidth="100.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="150.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="150.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="150.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints maxHeight="231.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+                                  <RowConstraints maxHeight="231.0" minHeight="10.0" prefHeight="72.0" vgrow="SOMETIMES" />
+                                  <RowConstraints maxHeight="448.0" minHeight="10.0" prefHeight="108.0" vgrow="SOMETIMES" />
+                                  <RowConstraints maxHeight="448.0" minHeight="10.0" prefHeight="108.0" vgrow="SOMETIMES" />
+                                  <RowConstraints maxHeight="448.0" minHeight="10.0" prefHeight="96.0" vgrow="SOMETIMES" />
+                                  <RowConstraints maxHeight="448.0" minHeight="10.0" prefHeight="148.0" vgrow="SOMETIMES" />
+                                  <RowConstraints maxHeight="448.0" minHeight="10.0" prefHeight="148.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                <padding>
+                                  <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                                </padding>
+                                <children>
+                                <Label text="Past Procedures" GridPane.columnSpan="3" GridPane.halignment="CENTER">
+                                  <font>
+                                    <Font name="System Bold" size="16.0" />
+                                  </font>
+                                </Label>
+                                <Label text="Pending Procedures" GridPane.columnIndex="4" GridPane.columnSpan="3" GridPane.halignment="CENTER">
+                                  <font>
+                                    <Font name="System Bold" size="16.0" />
+                                  </font>
+                                </Label>
+                                <TableView fx:id="pastProceduresTable" onMouseClicked="#pastProcedureClicked" prefHeight="152.0" prefWidth="380.0" GridPane.columnSpan="3" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.rowSpan="3">
+                                  <columns>
+                                    <TableColumn fx:id="editPastProceduresDateColumn" prefWidth="100.0" text="Date" />
+                                    <TableColumn fx:id="editPastProceduresSummaryColumn" prefWidth="240.0" text="Summary" />
+                                  </columns>
+                                </TableView>
+                                <TableView fx:id="pendingProcedureTable" onMouseClicked="#pendingProcedureClicked" prefHeight="144.0" prefWidth="380.0" GridPane.columnIndex="4" GridPane.columnSpan="3" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.rowSpan="3">
+                                  <columns>
+                                    <TableColumn fx:id="editPendingProceduresDateColumn" prefWidth="100.0" text="Date" />
+                                    <TableColumn fx:id="editPendingProceduresSummaryColumn" prefWidth="240.0" text="Summary" />
+                                  </columns>
+                                </TableView>
+                                <VBox prefHeight="220.0" prefWidth="380.0" GridPane.columnSpan="3" GridPane.rowIndex="5" GridPane.rowSpan="2">
+                                  <children>
+                                    <Label text="Affected Organs">
+                                      <font>
+                                        <Font name="System Bold" size="12.0" />
+                                      </font>
+                                    </Label>
+                                    <Label fx:id="pastProcedureAffectedOrgans" wrapText="true" />
+                                    <Label text="Description">
+                                      <font>
+                                        <Font name="System Bold" size="12.0" />
+                                      </font>
+                                    </Label>
+                                    <TextArea fx:id="pastProcedureDescription" editable="false" prefHeight="137.0" prefWidth="380.0" wrapText="true" />
+                                    <HBox fx:id="pastProcedureEditDeletePane" alignment="CENTER_RIGHT" prefHeight="29.0" prefWidth="380.0" spacing="10.0">
+                                      <children>
+                                        <Button fx:id="pastProcedureDeleteButton" mnemonicParsing="false" onAction="#pastProcedureDeleteButtonPressed" text="Delete" />
+                                        <Button fx:id="pastProcedureEditButton" mnemonicParsing="false" onAction="#pastProcedureEditButtonPressed" text="Edit" />
+                                      </children>
+                                    </HBox>
+                                  </children>
+                                </VBox>
+                                <VBox prefHeight="219.0" prefWidth="380.0" GridPane.columnIndex="4" GridPane.columnSpan="3" GridPane.rowIndex="5" GridPane.rowSpan="2">
+                                  <children>
+                                    <Label text="Affected Organs">
+                                      <font>
+                                        <Font name="System Bold" size="12.0" />
+                                      </font>
+                                    </Label>
+                                    <Label fx:id="pendingProcedureAffectedOrgans" />
+                                    <Label text="Description">
+                                      <font>
+                                        <Font name="System Bold" size="12.0" />
+                                      </font>
+                                    </Label>
+                                    <TextArea fx:id="pendingProcedureDescription" editable="false" prefHeight="134.0" prefWidth="380.0" wrapText="true" />
+                                    <HBox fx:id="pendingProcedureEditDeletePane" alignment="CENTER_RIGHT" prefHeight="35.0" prefWidth="380.0" spacing="10.0">
+                                      <children>
+                                            <Button fx:id="addNewProcedureButton" mnemonicParsing="false" onAction="#addNewProcedureButtonPressed" text="Add New Procedure" />
+                                        <Button fx:id="pendingProcedureDeleteButton" mnemonicParsing="false" onAction="#pendingProcedureDeleteButtonPressed" text="Delete" />
+                                        <Button fx:id="pendingProcedureEditButton" mnemonicParsing="false" onAction="#pendingProcedureEditButtonPressed" text="Edit" />
+                                      </children>
+                                    </HBox>
+                                  </children>
+                                </VBox>
+                                             </children>
+                                          </GridPane>
+                            </children>
+                          </AnchorPane>
+                        </content>
+                      </Tab>
+                    </tabs>
+                  </TabPane>
+                </children>
+              </AnchorPane>
+            </center>
+               <top>
+                  <AnchorPane BorderPane.alignment="CENTER">
+                     <children>
+                        <GridPane id="abc123" alignment="TOP_CENTER" prefHeight="190.00" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <rowConstraints>
+                              <RowConstraints />
+                              <RowConstraints maxHeight="200.0" minHeight="200.0" prefHeight="200.0" />
+                              <RowConstraints />
+                              <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" />
+                              <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" />
+                           </rowConstraints>
+                           <children>
+                              <GridPane prefHeight="200.0" prefWidth="380.0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="1">
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Text fx:id="deathDetailsText" strokeType="OUTSIDE" strokeWidth="0.0" text="Deceased" GridPane.columnIndex="1" GridPane.valignment="BOTTOM" />
+                                    <Text fx:id="DonorLoggedIn" strokeType="OUTSIDE" strokeWidth="0.0" text=" DONOR NAME" wrappingWidth="405.13671875" GridPane.columnIndex="1">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                       <GridPane.margin>
+                                          <Insets left="30.0" />
+                                       </GridPane.margin>
+                                    </Text>
+                                    <GridPane prefHeight="52.0" prefWidth="258.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                      <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <children>
+                                          <Text fx:id="deathDateText" strokeType="OUTSIDE" strokeWidth="0.0" text="Date and Time:" />
+                                          <Label fx:id="editDateOfDeath" GridPane.columnIndex="1" />
+                                          <Label fx:id="editDeathCityLabel" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                          <Label fx:id="editDeathRegionLabel" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                          <Label fx:id="editDeathCountryLabel" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                          <Text fx:id="deathCityText" strokeType="OUTSIDE" strokeWidth="0.0" text="City:" GridPane.rowIndex="1" />
+                                          <Text fx:id="deathRegionText" strokeType="OUTSIDE" strokeWidth="0.0" text="Region:" GridPane.rowIndex="2" />
+                                          <Text fx:id="deathCountryText" strokeType="OUTSIDE" strokeWidth="0.0" text="Country:" GridPane.rowIndex="3" />
+                                       </children>
+                                    </GridPane>
+                                    <GridPane prefHeight="200.0" prefWidth="298.0" GridPane.columnIndex="3" GridPane.rowSpan="3">
+                                      <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="32.0" minWidth="10.0" prefWidth="32.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="62.0" minWidth="0.0" prefWidth="48.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="125.0" minWidth="10.0" prefWidth="97.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="114.0" minWidth="10.0" prefWidth="114.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints maxHeight="91.0" minHeight="10.0" prefHeight="77.0" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="62.0" minHeight="10.0" prefHeight="57.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <children>
+                                        <Button fx:id="Cancel" mnemonicParsing="false" onAction="#cancelSelected" prefHeight="39.0" prefWidth="79.0" text="Cancel" GridPane.columnIndex="3" GridPane.halignment="CENTER">
+                                             <tooltip>
+                                                <Tooltip text="Cancel Changes" />
+                                             </tooltip>
+                                             <GridPane.margin>
+                                                <Insets bottom="5.0" left="5.0" right="25.0" top="5.0" />
+                                             </GridPane.margin>
+                                          </Button>
+                                        <Button fx:id="Done" mnemonicParsing="false" onAction="#doneSelected" prefHeight="39.0" prefWidth="79.0" text="Done" GridPane.columnIndex="2" GridPane.halignment="CENTER">
+                                             <tooltip>
+                                                <Tooltip text="Save Changes" />
+                                             </tooltip>
+                                             <GridPane.margin>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                             </GridPane.margin>
+                                          </Button>
+                                        <Button fx:id="Redo" mnemonicParsing="false" onAction="#redoEvent" prefHeight="10.0" prefWidth="15.0" text="↱" GridPane.columnIndex="1" GridPane.halignment="CENTER">
+                                             <tooltip>
+                                                <Tooltip text="Redo" />
+                                             </tooltip>
+                                             <GridPane.margin>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                             </GridPane.margin>
+                                          </Button>
+                                        <Button fx:id="Undo" mnemonicParsing="false" onAction="#undoEvent" prefHeight="10.0" prefWidth="15.0" text="↰" GridPane.halignment="CENTER">
+                                             <tooltip>
+                                                <Tooltip text="Undo" />
+                                             </tooltip>
+                                             <GridPane.margin>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                             </GridPane.margin>
+                                          </Button>
+                                       </children>
+                                    </GridPane>
+                                 </children>
+                                 <columnConstraints>
+                                    <ColumnConstraints />
+                                    <ColumnConstraints maxWidth="431.0" minWidth="225.0" prefWidth="334.0" />
+                                    <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="50.0" prefWidth="50.0" />
+                                    <ColumnConstraints maxWidth="315.0" minWidth="209.0" prefWidth="306.0" />
+                                 </columnConstraints>
+                              </GridPane>
+                              <GridPane GridPane.rowIndex="1">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints maxHeight="80.0" minHeight="80.0" prefHeight="80.0" valignment="CENTER" vgrow="SOMETIMES" />
+                                  <RowConstraints maxHeight="80.0" minHeight="80.0" prefHeight="80.0" vgrow="SOMETIMES" />
+                                  <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Button fx:id="deleteButton" mnemonicParsing="false" onAction="#deletePhoto" prefHeight="29.0" prefWidth="53.0" text="Delete" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                       <GridPane.margin>
+                                          <Insets />
+                                       </GridPane.margin>
+                                       <tooltip>
+                                          <Tooltip text="Delete Profile Photo" />
+                                       </tooltip>
+                                    </Button>
+                                    <Button fx:id="setButton" mnemonicParsing="false" onAction="#setPhoto" prefHeight="22.0" prefWidth="52.0" text="Update" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                       <GridPane.margin>
+                                          <Insets />
+                                       </GridPane.margin>
+                                       <tooltip>
+                                          <Tooltip text="Update Profile Photo" />
+                                       </tooltip>
+                                    </Button>
+                                    <ImageView fx:id="profileImage" fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" GridPane.columnSpan="2" GridPane.halignment="LEFT" GridPane.rowSpan="2" GridPane.valignment="CENTER">
+                                       <GridPane.margin>
+                                          <Insets bottom="5.0" left="10.0" right="5.0" top="10.0" />
+                                       </GridPane.margin></ImageView>
+                                 </children>
+                              </GridPane>
+                           </children>
+                           <columnConstraints>
+                              <ColumnConstraints fillWidth="false" halignment="LEFT" hgrow="NEVER" maxWidth="160.0" minWidth="160.0" prefWidth="160.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="334.0" />
+                              <ColumnConstraints fillWidth="false" halignment="RIGHT" hgrow="NEVER" maxWidth="306.0" minWidth="220.0" prefWidth="306.0" />
+                           </columnConstraints>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+               </top>
+          </BorderPane>
+        </children>
+      </AnchorPane>
+   </children>
+</StackPane>

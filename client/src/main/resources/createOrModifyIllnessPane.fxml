@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<VBox stylesheets="/CSS/profile.css" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+  prefHeight="626.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8"
+  xmlns:fx="http://javafx.com/fxml/1"
+  fx:controller="seng302.controllers.createOrModifyIllnessController">
+  <children>
+    <AnchorPane prefHeight="675.0" prefWidth="813.0">
+      <children>
+        <Button fx:id="Undo" layoutX="660.0" layoutY="127.0" mnemonicParsing="false"
+          onAction="#undo" prefHeight="10.0" prefWidth="15.0" text="↰"/>
+        <Button fx:id="Redo" layoutX="689.0" layoutY="127.0" mnemonicParsing="false"
+          onAction="#redo" prefHeight="10.0" prefWidth="15.0" text="↱"/>
+        <Label layoutX="209.0" layoutY="55.0" text="Create or Update a Diagnosis">
+          <font>
+            <Font size="30.0"/>
+          </font>
+        </Label>
+        <Label layoutX="75.0" layoutY="169.0" text="Diagnosis Name *">
+          <font>
+            <Font size="20.0"/>
+          </font>
+        </Label>
+        <Label layoutX="75.0" layoutY="242.0" text="Date of Diagnosis *">
+          <font>
+            <Font size="20.0"/>
+          </font>
+        </Label>
+        <TextField fx:id="nameOfDiagnoses" layoutX="277.0" layoutY="172.0" prefHeight="25.0"
+          prefWidth="305.0"/>
+        <CheckBox fx:id="chronicCheckBox" layoutX="75.0" layoutY="326.0" mnemonicParsing="false"
+          onAction="#checkBoxEvent" text="Chronic *">
+          <font>
+            <Font size="20.0"/>
+          </font>
+        </CheckBox>
+        <CheckBox fx:id="curedCheckBox" layoutX="75.0" layoutY="393.0" mnemonicParsing="false"
+          onAction="#checkBoxEvent" prefHeight="28.0" prefWidth="217.0" text="Cured/Resolved *"
+          AnchorPane.leftAnchor="75.0" AnchorPane.rightAnchor="508.0">
+          <font>
+            <Font size="20.0"/>
+          </font>
+        </CheckBox>
+        <Button fx:id="Done" layoutX="689.0" layoutY="549.0" mnemonicParsing="false"
+          onAction="#doneButtonPressed" text="Done">
+          <font>
+            <Font size="20.0"/>
+          </font>
+        </Button>
+        <DatePicker fx:id="dateOfDiagnoses" layoutX="277.0" layoutY="245.0" prefHeight="25.0"
+          prefWidth="305.0"/>
+        <Button fx:id="Cancel" layoutX="556.0" layoutY="549.0" mnemonicParsing="false"
+          onAction="#cancelButtonPressed" text="Cancel">
+          <font>
+            <Font size="20.0"/>
+          </font>
+        </Button>
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>
